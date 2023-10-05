@@ -1357,6 +1357,7 @@ a {
   height: 80px;
   object-fit: cover;
   border-radius: 50% !important;
+margin: 0 auto;
 }
 .cid-tOUik0aE21 .mbr-fallback-image.disabled {
   display: none;
@@ -1611,6 +1612,7 @@ a {
   height: 80px;
   object-fit: cover;
   border-radius: 50%!important;
+margin: 0 auto;
 }
 .cid-tOUh4FIlHL .mbr-fallback-image {
   display: block;
