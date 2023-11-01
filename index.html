@@ -9,7 +9,7 @@
   <meta name="description" content="">
   
   
-  <title>Behavix</title>
+  <title>Behavix! Reduce food waste in canteens</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -27,7 +27,7 @@
 
   
   
-  
+ <script src="https://smtpjs.com/v3/smtp.js"> 
 </head>
 <body>
   
@@ -518,7 +518,7 @@
                         <div class="col-12 form-group mb-3" data-for="textarea">
                             <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control" id="textarea-form02-6"></textarea>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-7"><span class="mbrib-letter mbr-iconfont mbr-iconfont-btn"></span>Send message</button></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-7" onclick="mandaMail();" ><span class="mbrib-letter mbr-iconfont mbr-iconfont-btn"></span>Send message</button></div>
                     </div>
                 </form>
             </div>
@@ -561,5 +561,23 @@
   
   
   <input name="animation" type="hidden">
+	<script>
+		function mandaMail(){
+		nome = document.getElementById('name-form02-6').value;
+mail = document.getElementById('email-form02-6').value;
+tel = document.getElementById('phone-form02-6').value;
+mex = document.getElementById('textarea-form02-6').value;
+
+fetch("https://www.behavix.it/inviamail.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        },
+        body: `nome=${nome}&mail=${mail}&tel=${tel}&mex=${mex}`,
+      })
+      .then((response) => response.text())
+      .then((res) => (document.getElementById("result").innerHTML = res));
+		}
+	</script>
   </body>
 </html>
