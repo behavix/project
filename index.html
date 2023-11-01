@@ -563,8 +563,8 @@
   
   <input name="animation" type="hidden">
 	<script>
-		function mandaMail(){
-		nome = document.getElementById('name-form02-6').value;
+function mandaMail(){
+nome = document.getElementById('name-form02-6').value;
 mail = document.getElementById('email-form02-6').value;
 tel = document.getElementById('phone-form02-6').value;
 mex = document.getElementById('textarea-form02-6').value;
@@ -575,11 +575,12 @@ fetch("./inviamail.php", {
           "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8; Access-Control-Allow-Origin;",
         },
         body: `nome=${nome}&mail=${mail}&tel=${tel}&mex=${mex}`,
-      })
+})
       .then((response) => response.text())
       .then((res) => (document.getElementById("result").innerHTML = res));
-		}
 document.getElementById('mandat').style.display = block;
+	
+}
 	</script>
   </body>
 </html>
