@@ -1,0 +1,1 @@
+Dovrebbe essere /* Access-Control-Allow-Origin: https://zeromy.it/
