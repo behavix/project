@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   $to = "massimiliano.carraro@behavix.it";
   $headers = "From: clientehainserito@behavix.it" . "\r\n" .
-    "Ccn: engioturri@gmail.com";
+    "Ccn: stefania.malfatti@behavix.it";
 
   $retval = mail($to, $emailcliente, $messaggio, $headers);
 
