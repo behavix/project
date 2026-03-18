@@ -1,13 +1,11 @@
 @charset "UTF-8";
-section {
-  background-color: #ffffff;
-}
+
 
 body {
   font-style: normal;
   line-height: 1.5;
   font-weight: 400;
-  color: #232323;
+  color: #ffffff;
   position: relative;
 }
 
@@ -18,17 +16,17 @@ button {
 
 .embla__button,
 .carousel-control {
-  background-color: #edefea !important;
+  background-color: #df8729 !important;
   opacity: 0.8 !important;
-  color: #464845 !important;
-  border-color: #edefea !important;
+  color: #ffffff !important;
+  border-color: #df8729 !important;
 }
 
 .carousel .close,
 .modalWindow .close {
-  background-color: #edefea !important;
-  color: #464845 !important;
-  border-color: #edefea !important;
+  background-color: #df8729!important;
+  color: #ffffff !important;
+  border-color: #df8729 !important;
   opacity: 0.8 !important;
 }
 
@@ -38,8 +36,8 @@ button {
 }
 
 .carousel-indicators li {
-  background-color: #edefea !important;
-  border: 2px solid #464845 !important;
+  background-color: #df8729 !important;
+  border: 2px solid #df8729 !important;
 }
 
 .carousel-indicators li:hover,
@@ -49,7 +47,7 @@ button {
 
 .embla__button:hover,
 .carousel-control:hover {
-  background-color: #edefea !important;
+  background-color: #ffffff !important;
   opacity: 1 !important;
 }
 
@@ -162,7 +160,7 @@ section .mbr-background-video-preview {
 }
 
 .mbr-black {
-  color: #111111;
+  color: #000000;
 }
 
 .mbr-bg-white {
@@ -170,7 +168,7 @@ section .mbr-background-video-preview {
 }
 
 .mbr-bg-black {
-  background-color: #000000;
+  background-color: #002d28;
 }
 
 /*! Text-aligns */
@@ -475,7 +473,7 @@ nav .mbr-section-btn {
   text-decoration: none;
   outline-style: none;
   animation: arrowdown 1.7s ease-in-out infinite;
-  color: #ffffff;
+  color: #edefea;
 }
 .mbr-arrow > a > i {
   position: absolute;
@@ -962,4 +960,37 @@ blockquote {
 	padding: 0;
 	top: 0;
 	left: -2400px;
+} 
+
+/*  COLORI SEZIONI BEHAVIX  */ 
+
+/* VERDE */
+#menu01-3a, 
+#header05-39,
+#header09-3e,
+#form02-3k,
+#footer03-8 {
+  background-color: #002d28 !important;
+  color: #ffffff !important;
+}
+
+/* ARANCIONE */
+#article04-3g {
+  background-color: #df8729 !important;
+  color: #1a1a1a !important;
+}
+
+/* BIANCO */
+#features04-3f,
+#article02-3h,
+#article04-3i,
+#article02-3j {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+/* BOTTONI HOVER */
+.btn-primary:hover {
+  background-color: #c76f1f !important;
+  border-color: #c76f1f !important;
 }
