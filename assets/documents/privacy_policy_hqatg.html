@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informativa Privacy · Autogrill | Behavix</title>
+<meta name="description" content="Informativa sul trattamento dei dati personali di Behavix srl Societa Benefit ai sensi del Reg. UE 2016/679 (GDPR).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --appbar:#022C22; --appbar-hover:#04382c;
+    --primary:#064E3B; --primary-tint:#E1F0E8;
+    --accent:#EAB308; --accent-strong:#F59E0B; --accent-wash:#FFFBEB; --on-accent:#062524;
+    --page:#F8FAFC; --surface:#FFFFFF; --surface-warm:#FCFCF5;
+    --ink:#1E293B; --ink-muted:#64748B; --border:#E7ECEA;
+    --radius-card:24px; --radius-input:16px; --radius-pill:100px;
+    --shadow-card:0 8px 24px -6px rgba(6,78,59,0.08);
+    --maxw:860px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--page); color:var(--ink);
+    font-family:"Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  /* Appbar */
+  .appbar{
+    position:sticky; top:0; z-index:50; background:var(--appbar); color:#fff;
+    box-shadow:0 2px 12px rgba(2,44,34,.25);
+  }
+  .appbar-inner{
+    max-width:var(--maxw); margin:0 auto; padding:12px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:#fff;}
+  .brand img{height:40px; width:40px; border-radius:10px; display:block;}
+  .brand span{font-weight:800; letter-spacing:.14em; font-size:1.05rem;}
+  .lang-switch{display:inline-flex; background:rgba(255,255,255,.12); border-radius:var(--radius-pill); padding:4px;}
+  .lang-switch button{
+    border:0; background:transparent; color:rgba(255,255,255,.75);
+    font-family:inherit; font-weight:700; font-size:.82rem; letter-spacing:.03em;
+    padding:6px 16px; border-radius:var(--radius-pill); cursor:pointer; transition:all .15s ease;
+  }
+  .lang-switch button.active{background:var(--accent); color:var(--on-accent);}
+  .lang-switch button:not(.active):hover{color:#fff;}
+  /* Layout */
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px;}
+  .hero{
+    background:var(--surface); border-radius:var(--radius-card); box-shadow:var(--shadow-card);
+    padding:36px 34px; border:1px solid var(--border); position:relative; overflow:hidden;
+  }
+  .hero::before{content:""; position:absolute; left:0; top:0; bottom:0; width:6px; background:var(--accent);}
+  .hero .eyebrow{
+    display:inline-block; background:var(--primary-tint); color:var(--primary);
+    font-weight:700; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+    padding:6px 14px; border-radius:var(--radius-pill); margin-bottom:14px;
+  }
+  .hero h1{margin:0 0 10px; color:var(--primary); font-size:2rem; font-weight:800; line-height:1.2;}
+  .hero .subtitle{margin:0 0 18px; color:var(--ink-muted); font-size:1rem; font-weight:500;}
+  .hero .updated{
+    display:inline-flex; align-items:center; gap:8px; background:var(--accent-wash);
+    color:var(--on-accent); border:1px solid var(--accent-tint,#FDE68A);
+    font-weight:600; font-size:.82rem; padding:7px 14px; border-radius:var(--radius-pill);
+  }
+  .hero .updated::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--accent-strong);}
+  /* TOC */
+  .toc{
+    background:var(--surface-warm); border:1px solid var(--border); border-radius:var(--radius-card);
+    box-shadow:var(--shadow-card); padding:22px 26px; margin:24px 0;
+  }
+  .toc h2{margin:0 0 12px; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-muted); font-weight:700;}
+  .toc ol{margin:0; padding:0; counter-reset:toc; list-style:none;}
+  .toc li{counter-increment:toc; margin:0;}
+  .toc a{
+    display:flex; gap:12px; align-items:baseline; text-decoration:none; color:var(--ink);
+    padding:8px 10px; border-radius:12px; transition:background .12s ease, color .12s ease; font-weight:500; font-size:.95rem;
+  }
+  .toc a::before{content:counter(toc,decimal-leading-zero); color:var(--accent-strong); font-weight:700; font-size:.82rem; min-width:26px;}
+  .toc a:hover{background:var(--primary-tint); color:var(--primary);}
+  /* Content */
+  .content{
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-card);
+    box-shadow:var(--shadow-card); padding:14px 34px 34px;
+  }
+  .content h2{
+    color:var(--primary); font-size:1.28rem; font-weight:800; line-height:1.3;
+    margin:2.2em 0 .6em; padding-left:16px; border-left:5px solid var(--accent); scroll-margin-top:84px;
+  }
+  .content h3{color:var(--appbar); font-size:1.06rem; font-weight:700; margin:1.6em 0 .5em; scroll-margin-top:84px;}
+  .content p{margin:0 0 1em;}
+  .content ul,.content ol{margin:0 0 1.1em; padding-left:1.3em;}
+  .content li{margin:.35em 0;}
+  .content ul li::marker{color:var(--accent-strong);}
+  .content a{color:var(--primary); font-weight:600; text-decoration:underline; text-underline-offset:2px;}
+  .content a:hover{color:var(--accent-strong);}
+  .content strong{color:var(--appbar); font-weight:700;}
+  .content u,.content .underline{text-decoration:underline; text-underline-offset:2px;}
+  .content blockquote{
+    margin:1.2em 0; padding:16px 20px; background:var(--accent-wash);
+    border:1px solid #FDE68A; border-radius:var(--radius-input); color:var(--on-accent);
+  }
+  .content blockquote p{margin:.3em 0;}
+  .content hr{border:0; border-top:1px solid var(--border); margin:2em 0;}
+  .content > p:first-of-type{font-size:1.05rem;}
+  /* Footer */
+  .site-footer{background:var(--appbar); color:#fff; padding:28px 20px;}
+  .site-footer .fi{max-width:var(--maxw); margin:0 auto; display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center;}
+  .site-footer .fi .company{font-size:.9rem; font-weight:500; line-height:1.7;}
+  .site-footer a{color:var(--accent); text-decoration:none; font-weight:600;}
+  .site-footer a:hover{text-decoration:underline;}
+  .site-footer .muted{color:rgba(255,255,255,.6); font-weight:400;}
+  [hidden]{display:none!important;}
+  @media (max-width:640px){
+    .hero{padding:26px 20px;} .hero h1{font-size:1.55rem;}
+    .content{padding:8px 18px 24px;} .content h2{font-size:1.12rem;}
+    .brand span{display:none;}
+  }
+  @media print{
+    .appbar,.lang-switch,.toc{display:none!important;}
+    .hero,.content{box-shadow:none; border:none; padding:0;}
+    body{background:#fff;} [hidden]{display:block!important;}
+  }
+</style>
+</head>
+<body>
+<header class="appbar">
+  <div class="appbar-inner">
+    <a class="brand" href="../../index.html">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAB8CAMAAACcwCSMAAABblBMVEUAAAD9/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f0E4eOaAAAAenRSTlMA/4VxAQRpcPsG8o+SO+38/jr61gnz9ewC9BTEFyXwHuHxoPdzG5Q4IwUxQ33IYhmVN0utUsKfxtJr1xK+CjXFTnpNwM2OydDZdNQLboZVYLt+o3WXImfm3ysPbT4y5GSwH4m4nUHMJ2PqtKvdmoJ4DSlQV4ulSEbosgmBZ6wAAAguSURBVHiczVvnQ9s6EJcfCYTsHZIQIBDCHmETaNlQWvZsoS2UVTrp7ut//2wNj2Bbw0l59yWKrLufJZ+ku9MJAG5yH440+Ecnn7xLhiUpnHz3ZHLU3zDS7eaXxEmZsR/jLZIp5cdXxjI1A3ZHNpdD5sCEQsubkVqMwGPfa3tgQq99j6uLfHI6xYaMaGrjpGrQb3x5HmiFvP7DqkB3T0RNpLeUl0bbD/z+g/bRpbKZCkbbux1DNw9XQiez/ttIpknfqCnTNejLJivhh5sdQfcUjJ3yzO0GGq0aNwb6sx5D8/y6ZWM6RQxqFpo9onal+WzHMBunAoLQ8RW9nLbdVja21v42/Rv7Holg9z7VyVj9zrF2uLcGdKyxXm5oV32Hxj/5y8XJ3TencXfUc3LH2zXm8jdOZgg/X9Yk7MV5WIe0cUvsC2psY8GrfbUhdr6vz1W2yzdi0Aq1vtfU9QUrUymldvtMYMQ1ct2qnU9F2Fheqhxrb81bNJFXcjVVFioot6z245oJO03aT1joSX/quB4Wpo9TC7BwdJzqN28bvyLS0gzoJdLvUJ1FixH5YVjZs0uyGSX9kguvlMKiRfMNsuQmqCP/lXzv5LxVk8/K42m5cKoUPsuFI6Xwj1X7RbLjBClaN0T0vMV6Uf5Hed4gF+oIZr0tOIgEic532mHHyfwO2phC3OCglwznqs1q4yLrWoudGcYPDnpJ3/esp+4R+d62G6EAOIiQKTRt+X54LwnN28kRAgeLWOc7Xpk/j5M9tMFWjBg42MDCY+b7+wp+PGEvRRAckNXGZ/Ywgu2WNdr+JwgexyttyESherC9lrBYzx2DgxxeO5/e36MLeFTOaDKEwcEghtivfNCMbeRL+h4qDO7C+3u+0rQYxoPOYDsIg4NWPPAHxuruqMWIVBWcfNtozlA7gWrLLPaaA/DGGMJp11e+wR3/xiDACThYRDgevQ/rR3WTTBabCr6tFNa5wF1ZhFTUqk7yqOoXC78GfiJv/v92coGDPqzYM2rNKapZZTNV+5W2d0ops34HzYN9peYzEzPAFoO2f+DF7Tsb+5nS9qe+BqrrERv3GMKKkY4+Rv/bGH3BktI4+EWrePROqeli43ZjQ62E//vQ3102btADjaJNrQJ+hxSrV9WP0Pz4XVCMK8Tof+O5oW1OfVGdMDp1IrPiGI1zBL3KLCs3aIW28Cn+F4BrZpL51cEOwkMvv4n+MCqMQsoq2fYMla/Rer3Ozo03twv4B23yHo7QUdOouhgGkGV4buGrmVEGjfsaLCMLZo6dW9bvS7w6f0U7cfYZD/c45AkrvR3j03UDPUMbRfYLvamOFhDillz8of/+nHQBWZe4+g1AF0JULEk0CEmR4EcnNPRv+Potb6xp8qHd+KsJYCN/tYU/cIL663WDQ8OCw0dlzklGCHsIOejqyzQogD2kxAQ6BELr2whzHjSgAmO8xkC/obYJMJYQZoEYMSJHM7ADwwKMM2GIWQSj8LeFY4VSaVrhZDNgjNSE3PVzMAl/ywIiNAOSm5A/PACeSKJfzgH4LAT9CKAVIo3+XfAPEDQIUJyqnc5QTXDko0QBUrwDOkM1wYtoigEHC5w4uO//AP6gw/4gCneFFe5Bp9qDLjIPurw62FiEwdWNxcGWKgyubql1CJzRx6wOOHaLC07MKGFw1YzqRgXTcGytwFUD0p2HBRHTWRh8CUImepw4DaLgmtNAxkDAXRIF17lL2FG0OBGsBfgCQlQcRewiC3x0UXCdiwzWYJknOOAMPINirTA4QMIi9Ch/lcANYREcENr5W+CXeg3nDoU5AzeGwohFxa3vYuBY10ncmTP86QychD/VnWxKm3g1B68M/JKjxgHO7AwhcGQ5SVpawgk+9emrPfj9YD8xZ+b4ui4ATo459CGFQ3zAM88lqYEfHJsuHkOWIE4ZYDraUgnqTj0PRw8+2toz1JJDvQKXqB1JWuWKPmKDMVpxWIyPM71cy5z75XUPT/vWPEL5VFHfjOvfO0qGsifXH9zDezli6+iBdFs7cHKEfXfvSSNe5rw5E7aqUDce3JiJVgdw2sIyV9oeO8VvkPzQS7OneHOTrpjluXNv2RXuExZvHgR5hCehtMEmzVV/LEmpfUYXcxoLL1vMTZKk47HKLjPSLmpdpLeUaYSSpINPg2VKssSgc1hcmMXH7CLpSaeWTVx7uEmQIVGWzE1sCdqSmpj102YZia/iRik6+gUBpweT1JS0G9vc4yGSpxykjjz5RvRDsS62ZDwAXpCXTNO0rhlbIFHaqjRCvjctDVG24hO4qYc2475DjQtbZrhhmiYJmGkGX/RaTT29oqx1gct8Yum3fZs4WVukJJORdk36Li3TRtRNs7a7b4isNKOBqGZrSt5bZ+nGg2ryMF2BCb3QcvPfcztRGrX+UcWwJ1rL/tSqyuYtCKaY99TlVSE3lDlmpPieyijFFkWS60dimoSfnPcaXNO6awXZPl74vqzG3XHK//KvdK8uDYzxXKgYm9Sxli33MTt65DNcJeln/G6dC891bCE/58m+SgH9bRLJs3NLDQ9nBncMl3hipjYTGzXu5yUDfnYhYn19qGth3Hh9yHvn4PqQTEMHlRen0uO+7dKM8eLUTGl7ZSld0TD6ieMOhwXl2j3SPQoHY7MfJoZ9vuGJD7NPg+H7LTx71ARaJjosJu4Lt6fEsPPbaoRmGmJ0QI1idTN0mRzkKvmP2ZCPi1018PfcgYs1k4+rp/DaRaB2l2Obt3xzXnPgxJxvy9m9QBZy5+YLxfOBjym4+keDHwfOi4X5HJenjug/iFXHvkQpcpoAAAAASUVORK5CYII=" alt="Behavix">
+      <span>BEHAVIX</span>
+    </a>
+    <div class="lang-switch" role="group" aria-label="Lingua / Language">
+      <button id="btn-it" class="active" onclick="setLang('it')" aria-pressed="true">IT</button>
+      <button id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- IT -->
+  <section id="lang-it" data-lang="it">
+    <div class="hero">
+      <span class="eyebrow">Informativa Privacy · Autogrill</span>
+      <h1>Informativa sul trattamento dei dati</h1>
+      <p class="subtitle">Progetto sperimentale "Monitoraggio e Prevenzione dello Spreco Alimentare attraverso Interventi Comportamentali e Digitali"</p>
+      <span class="updated">Aggiornata al 22/07/2026</span>
+    </div>
+    <nav class="toc" id="toc-it" aria-label="Sommario"><h2>Sommario</h2><ol></ol></nav>
+    <div class="content" id="content-it">
+<p><em>Gentile Utente</em>,</p>
+<p>Behavix srl Società Benefit è una startup innovativa che ha bisogno della tua collaborazione. Il progetto per il quale ti coinvolgiamo nasce dal proposito di contribuire a ridurre lo spreco alimentare dalla collaborazione incrociata tra la società Behavix srl SB e Autogrill per avviare una sperimentazione all’interno della mensa/ristorante (i ristoranti aziendali Autogrill individuati nell'ambito del progetto) e che in seguito potrà essere estesa ad altre mense</p>
+<p>I nostri utenti target sono individui di età pari o superiore a 18 anni che studiano o lavorano e frequentano la mensa/ristorante presso (i ristoranti aziendali Autogrill individuati nell'ambito del progetto) nonché persone esterne che vogliano prendere parte all’iniziativa La partecipazione al processo di raccolta dati è del tutto <strong>volontaria</strong>. Raccogliamo specificamente dati identificabili solo da individui che hanno esplicitamente accettato di partecipare come volontari.</p>
+<p>Altre persone potranno scegliere di fornire dati in forma anonima, assicurando la completa protezione della propria privacy. Inoltre, gli individui che preferiscono non prendere parte allo studio hanno la possibilità di astenersi senza alcun obbligo. Questo approccio garantisce una raccolta dati <strong>etica</strong>, rispettando le preferenze degli utenti e la conformità alle normative sulla privacy.</p>
+<p><strong>Perché ti sto dicendo tutto questo?</strong> Perché, <strong>se ci darai il tuo consenso</strong>, utilizzeremo i dati personali e “particolari” che vorrai fornirci <strong>per migliorare il servizio mensa e creare un sistema per evitare o ridurre gli sprechi alimentari</strong>. Se sei interessato a contribuire e a darci una mano, Ti invitiamo a continuare a leggere la presente informativa.</p>
+<p>La Tua privacy è importante per noi. In questa informativa, seguendo <em>l’art. 13 del Regolamento Europeo sulla Protezione dei Dati Personali (Reg. UE 2016/679 – d’ora in avanti, GDPR)</em> ti spieghiamo in modo chiaro e trasparente come raccogliamo, utilizziamo, proteggiamo e conserviamo i tuoi dati personali, nonché quali diritti puoi esercitare, quando utilizzi la piattaforma di Behavix.</p>
+<p>La presente Privacy Policy ha lo scopo di descrivere le modalità di gestione della piattaforma/App, in riferimento al trattamento dei dati personali degli utenti/visitatori che lo consultano. Si tratta di un’informativa che è resa anche ai sensi dell’art. 13 del D. Lgs. 196/03 – Codice in materia di protezione dei dati personali – a coloro che si collegano alla piattaforma/App e usufruiscono dei relativi servizi, e che garantisce il rispetto della normativa in materia di protezione dei dati personali.</p>
+<p>Partiamo dall’informazione cardine, chi gestisce i tuoi dati personali, ovvero chi è il TITOLARE DEL TRATTAMENTO:</p>
+<h2 id="chi-è-il-titolare-del-trattamento-dei-dati-personali">CHI È IL TITOLARE DEL TRATTAMENTO DEI DATI PERSONALI?</h2>
+<p>Il GDPR definisce Titolare del trattamento "<em>la persona fisica o giuridica, l'autorità pubblica, il servizio o altro organismo che, singolarmente o insieme ad altri, determina le finalità e i mezzi del trattamento di dati personali</em>".</p>
+<p>Il Titolare è, quindi, colui che decide "<strong>perché</strong>" e "<strong>come</strong>" devono essere trattati i dati, senza ricevere istruzioni da altri.</p>
+<p>Il Titolare del trattamento di questo sito è <strong>Behavix srl Società Benefit, con sede in via Tacchi 1, Rovereto (TN) 38068, Italy, contattabile al seguente indirizzo di posta elettronica:</strong> <a href="mailto:info@behavix.it">info@behavix.it</a></p>
+<p>Il Titolare può affidare ad altri (persone fisiche o società) alcuni trattamenti di dati personali, ma tali soggetti devono essere designati specificamente come <em>Responsabili del trattamento (ex art. 28 GDPR)</em> e ricevere istruzioni chiare e precise su come trattare i dati, garantendo, a loro volta, adeguati standard di sicurezza e liceità nel trattamento/trattamenti a loro affidati.</p>
+<p><strong>Per farti comprendere al meglio tutte le informazioni contenute in questo documento e che Tu, in quanto UTENTE, hai il diritto di conoscere in modo <em>chiaro e trasparente</em>, andiamo qui a fornirti una spiegazione semplice, per quanto sintetica, di ciò che si intende per dati personali.</strong></p>
+<h2 id="cosa-si-intende-per-dati-personali">COSA SI INTENDE PER DATI PERSONALI?</h2>
+<p>Ci si riferisce ad una persona fisica e, in particolare, a quelle informazioni attraverso le quali tale persona viene o può essere identificata, quali, ad esempio, le sue abitudini, il suo stile di vita, le sue relazioni personali, il suo stato di salute, la sua situazione economica etc.</p>
+<p>I dati personali, definiti dati personali <strong>“comuni”</strong>, che identificano una persona fisica in modo diretto sono, ad esempio, i dati anagrafici (nome e cognome) e le immagini. I dati personali che identificano una persona fisica in modo indiretto sono, ad esempio, il numero di telefono, il codice fiscale, l'indirizzo IP, l’e-mail, il numero di targa, gli estremi della carta di credito, etc.</p>
+<p>Vi sono, inoltre, i cd. dati <strong>“particolari”</strong>, o anche detti <em>“sensibili”</em>, che sono i dati genetici, i dati biometrici, quelli relativi alla salute, alla vita o all’orientamento sessuale, quelli che rivelano l'origine razziale od etnica, le convinzioni religiose e filosofiche, le opinioni politiche, l'appartenenza sindacale.</p>
+<p>Vi sono anche i cd. dati <strong>“giudiziari”</strong>, vale a dire quelli che rivelano condanne penali, misure di sicurezza o la qualità di imputato o di indagato.</p>
+<p>Sono, infine, considerati <em>dati personali molto significativi</em> quelli relativi alle comunicazioni elettroniche (via Internet o telefono) e quelli che consentono la <strong>geolocalizzazione</strong>, fornendo informazioni sui luoghi frequentati e sugli spostamenti.</p>
+<h2 id="con-chi-condividiamo-i-dati-personali">CON CHI CONDIVIDIAMO I DATI PERSONALI?</h2>
+<p>Per le finalità del trattamento, possiamo condividere i Tuoi dati personali con:</p>
+<p>- persone autorizzate (ex art. 29 del GDPR) dal Titolare al trattamento di dati personali a svolgere attività strettamente correlate all'erogazione dei servizi di questo sito, che sono alle Sue dirette dipendenze, e che si sono impegnate alla riservatezza o sono comunque soggette per legge ad un obbligo di riservatezza;</p>
+<p>- i cd. Responsabili/sub-Responsabili del Trattamento (ex art. 28 GDPR), cioè soggetti, persone fisiche e società, che cooperano con il Titolare per il perseguimento delle varie finalità del trattamento, coloro che sono delegati a svolgere attività di manutenzione tecnica delle reti informatiche, a gestire le operazioni di vendita e/o a svolgere attività di necessario supporto ai servizi erogati tramite la loro piattaforma;</p>
+<p>- soggetti, enti od autorità per i quali sia obbligatorio comunicare i dati personali in forza di disposizioni di legge o di ordini delle Autorità.</p>
+<p><strong>I Responsabili/sub-responsabili del trattamento dati personali, così come gli Autorizzati, sono tutti nominati con atto formale ed indicati in apposito elenco.</strong> Se desideri avere maggiori informazioni su tali soggetti, non esitare a scrivere al Titolare al seguente indirizzo di posta elettronica: <a href="mailto:info@behavix.it">info@behavix.it</a></p>
+<p>Pertanto potremmo dover condividere i tuoi dati personali con i seguenti possibili <strong>destinatari</strong>:</p>
+<ul>
+<li><p>Consulenti, commercialisti o legali che eroghino prestazioni funzionali ai fini sopra indicati</p></li>
+<li><p>Istituti bancari che eroghino prestazioni funzionali ai fini sopra indicati</p></li>
+<li><p>Soggetti interni all’azienda che elaborano i dati</p></li>
+<li><p>Autorità giudiziarie o amministrative, per l’adempimento degli obblighi di legge</p></li>
+<li><p>Fornitori di servizi utili allo svolgimento delle attività richieste dall’utente</p></li>
+</ul>
+<p>(persone fisiche o società)</p>
+<ul>
+<li><p>Università ed Enti di ricerca per sviluppare al meglio il progetto di Behavix.</p></li>
+<li><p>L’ufficio Innovation e HR di Autogrill Italia S.p.A., limitatamente all’indirizzo e-mail dei vincitori, ai soli fini della gestione e consegna dei premi aziendali; per tale trattamento Autogrill agisce quale titolare autonomo del trattamento.</p></li>
+</ul>
+<p>Si specifica che i dati personali raccolti tramite la Piattaforma sono conservati ed elaborati mediante servizi cloud forniti da Microsoft Azure, con server localizzati nell’Unione Europea. L’utilizzo di tali servizi avviene in conformità agli standard di sicurezza e alle certificazioni previste dal fornitore, garantendo la protezione e l’integrità dei dati degli utenti. Per finalità statistiche e di analisi dell’esperienza utente, la Piattaforma si avvale inoltre di Google Analytics 4 e Microsoft Clarity, forniti rispettivamente da Google Ireland Limited e Microsoft Ireland Operations Limited, attivati solo previo consenso dell’Utente secondo quanto descritto nella Cookie Policy.</p>
+<p>Naturalmente Tu, UTENTE, mantieni i tuoi diritti, che, nello specifico, sono elencati nel punto a seguire.</p>
+<h2 id="quali-sono-i-tuoi-diritti-come-puoi-esercitarli-e-a-chi-devi-rivolgerti.">QUALI SONO I TUOI DIRITTI, COME PUOI ESERCITARLI E A CHI DEVI RIVOLGERTI.</h2>
+<h3 id="i-tuoi-diritti.">I Tuoi diritti.</h3>
+<p>I diritti che puoi esercitare a tutela dei Tuoi dati personali sono contenuti negli artt. 15 e ss. del GDPR.</p>
+<p>In particolare, hai il diritto di:</p>
+<p>- <strong>accedere</strong> ai Tuoi dati personali, di chiederne la rettifica, l'aggiornamento e la cancellazione o la limitazione, se incompleti, erronei o raccolti in violazione alla legge;</p>
+<p>- <strong>opporTi</strong> al trattamento per motivi legittimi o di ottenerne la portabilità;</p>
+<p>- <strong>ottenere la conferma</strong> dell'esistenza o meno di dati personali che Ti riguardano, anche se non ancora registrati, e la loro comunicazione in forma intelligibile.</p>
+<p>Hai, inoltre, il diritto di ottenere:</p>
+<p>a) <strong>l'indicazione</strong>:</p>
+<p>- dell'origine dei dati personali;</p>
+<p>- delle finalità e delle modalità del trattamento;</p>
+<p>- della logica applicata in caso di trattamento effettuato con l'ausilio di strumenti elettronici;</p>
+<p>- degli estremi identificativi del Titolare, del o dei Responsabile/i (interno/esterno) e dei soggetti o delle categorie di soggetti ai quali i dati personali possono essere comunicati o che possono venirne a conoscenza in qualità di Autorizzati;</p>
+<p>b) <strong>l'aggiornamento, la rettifica ovvero l'integrazione</strong> dei propri dati nei limiti della pertinenza all’attività svolta dal Titolare;</p>
+<p>c) <strong>la cancellazione, la trasformazione in forma anonima</strong> o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non è necessaria la conservazione in relazione alle finalità del trattamento;</p>
+<p>d) <strong>l'attestazione</strong> che le operazioni di cui alle lettere b) e c) sono state portate a conoscenza di coloro ai quali i dati sono stati comunicati, eccettuato il caso in cui tale adempimento si rivela impossibile o comporti un impiego di mezzi manifestamente sproporzionato rispetto al diritto tutelato.</p>
+<p>e) nel caso di <strong>trattamenti automatizzati</strong> che producano effetti significativi, hai il diritto di ottenere informazioni sulla logica alla base del trattamento e di richiedere l’intervento umano per una revisione della decisione.</p>
+<p>Hai, altresì, il diritto di <strong>opporTi</strong>, in tutto o in parte:</p>
+<p>f) per motivi legittimi al trattamento dei dati personali che Ti riguardano, ancorché pertinenti allo scopo della raccolta;</p>
+<p>g) al trattamento di dati personali che Ti riguardano a fini di invio della newsletter o di altre comunicazioni digitali, inviate per scopi promozionali;</p>
+<h3 id="come-puoi-esercitare-i-tuoi-diritti.">Come puoi esercitare i Tuoi diritti.</h3>
+<p>Puoi inviare la Tua richiesta al Titolare, al seguente indirizzo di posta elettronica: <a href="mailto:info@behavix.it">info@behavix.it</a>.</p>
+<p>Non devi rispettare alcuna particolare formalità per tale richiesta, che puoi inviare anche tramite un soggetto da Te incaricato e che puoi rinnovare per giustificati motivi. Il Titolare fornirà il suo riscontro nel più breve tempo possibile, e comunque, non oltre un mese dal ricevimento della richiesta stessa (termine prorogabile di due mesi, per complessità e numero istanze).</p>
+<p>Nel caso in cui tale riscontro dovesse mancare o non sia da Te condiviso, hai il diritto di proporre <strong>reclamo</strong> al Garante per la Protezione dei dati personali (ex art. 77 GDPR, art. 141 Codice Privacy) o di adire le opportune sedi giudiziarie (ex art. 79 GDPR, art. 152 Codice Privacy). Il modello per il reclamo e le informazioni su come compilarlo e presentarlo sono disponibili <a href="https://www.garanteprivacy.it/home/modulistica-e-servizi-online">qui</a>.</p>
+<h2 id="dati-trattati-con-la-piattaformaapp">DATI TRATTATI CON LA PIATTAFORMA/APP</h2>
+<p>Ai sensi dell’art. 13 del GDPR, ed in relazione ai dati personali di cui Behavix srl Società Benefit entrerà nella disponibilità, attraverso l’esecuzione del progetto di cui Tu entri a far parte, ti comunichiamo quanto segue:</p>
+<p>Sono fondamentalmente tre le parti interessate interagiscono con Behavix.</p>
+<ul>
+<li><p>Utenti finali della mensa - persone che mangiano in mensa.</p></li>
+<li><p>Fornitore di servizi di mensa: l'azienda che prepara il cibo.</p></li>
+<li><p>Host di mensa - l'organizzazione che utilizza il servizio di fornitura di mensa per consegnare il cibo alle persone.</p></li>
+</ul>
+<p><em>Tipologie di dati raccolti</em></p>
+<ol type="1">
+<li><em>Dati Personali</em>: Nell’ambito del Progetto, il Titolare raccoglie i dati personali degli Utenti che abbiano deciso di registrare un profilo personale.</li>
+</ol>
+<p>Il conferimento di alcuni dati personali è necessario ai fini della registrazione e della fruizione dei servizi offerti (dati obbligatori), mentre ulteriori dati hanno natura meramente facoltativa. La mancata comunicazione di questi ultimi non pregiudicherà in alcun modo la possibilità di partecipare al Progetto. Il progetto raccoglie dunque le seguenti informazioni personali da chi deciderà di registrare la propria area personale, alcune delle quali rimangono comunque facoltative e si rimette al singolo individuo la decisione di condividerle o meno: nome, cognome, indirizzo e-mail, sesso, anno di nascita, altezza, peso, mansione lavorativa, abitudini sportive, tipologia di dieta seguita (onnivora, vegetariana etc.), eventuali intolleranze o allergie (facoltativa), apporto di acqua quotidiano (facoltativa), sedentarietà (facoltativa) ed eventuali curiosità su obbiettivi personali (facoltativa) ed interesse ad approfondire tematiche relative al rapporto con il cibo (facoltativa).</p>
+<p>Nella nostra applicazione, <strong>utilizziamo le informazioni personali per</strong>:</p>
+<ol type="i">
+<li><p><strong>Capire perché gli utenti generano avanzi dopo i loro pasti</strong>. (<em>Per esempio, potremmo scoprire che, in una mensa, i più giovani tendono a prendere porzioni di pasto più grandi, il che porta a un tasso più elevato di rifiuti di avanzi durante il servizio</em>).</p></li>
+<li><p><strong>Comunicare agli utenti il diritto a riscattare le premialità previste dall’eventuali promozioni</strong>, ovvero iniziative con lo scopo di aumentare il coinvolgimento degli utenti nel progetto di Behavix.</p></li>
+</ol>
+<ol start="2" type="1">
+<li><p><em>Dati generati</em>: i dati generati sono quelli creati da un computer o da un altro processo automatizzato, anziché essere raccolti direttamente da una fonte umana. Qui i dati possono provenire da questionari liberamente e spontaneamente compilabili dagli utenti della mensa attraverso una WebApp, oppure scaturiti da dati aggregati e liberamente forniti ma in forma totalmente anonima, cui possono accedere i fornitori di servizi di mensa o i gestori delle mense.</p></li>
+<li><p><em>Quantità di avanzi</em>: al termine del turno della mensa gli operatori monitoreranno la quantità di cibo che rimane sui vassoi e gli utenti saranno in grado di vedere queste informazioni nel proprio account.</p></li>
+</ol>
+<h2 id="esclusione-di-responsabilità-per-dichiarazioni-mendaci">ESCLUSIONE DI RESPONSABILITÀ PER DICHIARAZIONI MENDACI</h2>
+<p>Tu, UTENTE. garantisci la veridicità, correttezza e aggiornamento dei dati personali forniti al Titolare del trattamento, assumendoTi la <strong>piena responsabilità</strong> per eventuali informazioni false, inesatte o incomplete. Il Titolare del trattamento non potrà essere ritenuto responsabile per dichiarazioni mendaci rese da te, UTENTE, né per eventuali conseguenze derivanti dall’utilizzo di dati non veritieri.</p>
+<p>Ai sensi dell’art. 5, par. 1, lett. d) del Regolamento UE 2016/679 (GDPR), i dati personali devono essere esatti e, se necessario, aggiornati, e l’Utente è tenuto a comunicare eventuali correzioni o integrazioni. L’eventuale fornitura di informazioni non veritiere potrebbe compromettere la correttezza del trattamento.</p>
+<h2 id="quali-tipo-di-dati-personali-raccogliamo-e-utilizziamo-sulla-nostra-piattaforma">QUALI TIPO DI DATI PERSONALI RACCOGLIAMO E UTILIZZIAMO SULLA NOSTRA PIATTAFORMA?</h2>
+<p>Per rendere accessibile, funzionante e performante la nostra piattaforma/App, utilizziamo i seguenti dati personali:</p>
+<ul>
+<li><p>Dati anagrafici e di contatto: E-MAIL E PASSWORD, oltre che nome, cognome, e sesso, anno di nascita, mansione lavorativa, altezza, peso e routine sportiva;</p></li>
+<li><p>Informazioni relative alle preferenze e abitudini alimentari;</p></li>
+<li><p>Dati particolari (ad esempio, informazioni su allergie o intolleranze alimentari); questi ultimi però facoltativi e pertanto anche <em>non necessari</em> per la normale fruizione ed erogazione del servizio fornito dalla nostra App.</p></li>
+</ul>
+<p><em><u>Si precisa che la Piattaforma utilizza cookie tecnici, strettamente necessari al funzionamento del servizio, per i quali non è richiesto il consenso preventivo dell’Utente. La Piattaforma utilizza inoltre strumenti di analisi di terze parti — in particolare Google Analytics 4 e Microsoft Clarity — con finalità statistiche e di miglioramento dell’esperienza utente (ad es. analisi del traffico, registrazione anonimizzata delle sessioni di navigazione). Questi strumenti vengono attivati solo previo consenso esplicito dell’Utente, richiesto tramite apposito banner cookie, e possono comportare il trasferimento di alcuni dati verso fornitori extra-SEE nel rispetto delle garanzie previste dal GDPR. Per l’elenco completo dei cookie utilizzati, le relative finalità, durate e le modalità per gestire o revocare il consenso, consulta la nostra Cookie Policy.</u></em></p>
+<p>Alcuni di questi dati ci sono forniti direttamente dagli Utenti, altri, invece, potranno essere eventualmente ricavati dalla navigazione, dai <em>cookie</em> e dai sistemi di tracciamento della navigazione degli utenti stessi. Se questa tipologia di profilazione dovesse avere luogo, troverai tutte le informazioni sul modo in cui utilizzeremo tali sistemi e i <em>cookies</em>, in particolare, disponibili in un altro documento, che si chiamerà <em>Cookie Policy, disponibile sul nostro sito web e fornita insieme alla presente informativa</em>. In tale documento troverai anche le indicazioni su come rifiutare alcuni tipi di <em>cookie</em> e, in generale, l’elenco con spiegazione delle tipologie di <em>cookie</em>s impiegate da noi e dalle aziende terze.</p>
+<p>Le categorie di persone alle quali tali dati appartengono e con le quali interagiamo per i nostri servizi sono:</p>
+<p>- soggetti che utilizzando le nostre App o i nostri servizi</p>
+<p>- soggetti che lavorano presso la/le location gestite da (Autogrill)</p>
+<p><strong>Ricapitolando</strong>, per offrirTi i nostri servizi, raccogliamo i seguenti dati personali:</p>
+<ul>
+<li><p>Dati identificativi: nome, cognome, email, password.</p></li>
+<li><p>Dati particolari: sesso, età, anno di nascita, peso, altezza</p></li>
+<li><p>Dati particolari <strong><em>facoltativi</em></strong>: eventuali allergie ed intolleranze</p></li>
+<li><p>Preferenze: lavoro ed impatto sul tempo che trascorri seduto, se pratichi sport, che tipo di sport e con quale frequenza, quanta acqua bevi durante il giorno ed eventuali obbiettivi e curiosità che ti caratterizzano. Alcuni di questi ultimi però facoltativi e pertanto anche non strettamente necessari per la normale fruizione ed erogazione del servizio fornito dalla nostra App.</p></li>
+</ul>
+<h2 id="per-quali-finalità-utilizziamo-i-dati-personali">PER QUALI FINALITÀ UTILIZZIAMO I DATI PERSONALI?</h2>
+<p>L’Applicazione raccoglie e tratta i dati personali degli utenti al fine di:</p>
+<ol type="a">
+<li><p>Creazione dell'account e comunicazione</p></li>
+<li><p>Partecipazione ad un progetto volto a ridurre lo spreco alimentare attraverso l'uso di tecnologie avanzate, come ad esempio analisi automatizzate.</p></li>
+<li><p>Miglioramento dei processi di economia circolare legati alla gestione dei pasti e alla riduzione degli sprechi.</p></li>
+<li><p>Raccolta e analisi di dati, inclusi dati particolari (ad esempio, preferenze alimentari, allergie, abitudini di consumo) per ottimizzare la distribuzione del cibo.</p></li>
+<li><p>Sviluppo e validazione di modelli predittivi per migliorare la gestione delle risorse alimentari e ridurre l'impatto ambientale della mensa.</p></li>
+<li><p>Sensibilizzazione degli utenti su tematiche legate alla sostenibilità e all'efficienza nella gestione del cibo.</p></li>
+<li><p>Utilizzo di trattamenti automatizzati nel rispetto delle disposizioni del GDPR in materia di <strong>processi decisionali automatizzati (art. 22 del GDPR)</strong>, per l'analisi e l'elaborazione dei dati raccolti, che possono influenzare l'erogazione dei servizi, la personalizzazione dell'esperienza e la gestione ottimizzata delle risorse.</p></li>
+</ol>
+<p>La base giuridica del trattamento è il consenso dell'interessato (art. 6, par. 1, lett. a) e, per i dati particolari, l'art. 9, par. 2, lett. a) del GDPR). Il conferimento dei dati è facoltativo, ma il mancato consenso potrebbe comportare l'impossibilità di partecipare allo studio.</p>
+<p>Pertanto, effettuiamo il trattamento dei dati personali per:</p>
+<p>1. <strong>gestire la registrazione come UTENTE/ACCOUNT della piattaforma/App</strong>: Se l’Utente decide di diventare un Account/Utente registrato per accedere alla piattaforma/App , il Titolare ha bisogno di trattare i dati per poterlo identificare come utente della Piattaforma e autorizzarlo ad accedere alle diverse funzionalità, prodotti e servizi disponibili in qualità di utente registrato. L’Utente ha altresì facoltà di cancellare il suo account tramite l’apposita funzione all’interno della web-app o in alternativa contattando il servizio di Assistenza Clienti in caso di imprevisti.</p>
+<p>2. <strong>erogare i nostri servizi</strong>. La base giuridica del trattamento di dati personali per tali finalità è stabilita dall’art. 6, par. 1, lett. b del GDPR (esecuzione di un contratto o di misure precontrattuali). La mancata comunicazione dei dati personali impedisce il perfezionarsi del rapporto contrattuale, essendo un requisito necessario per la conclusione del contratto stesso.</p>
+<p>3. In altri casi, invece, non possiamo effettuare il trattamento dei Tuoi dati personali senza il <strong>Tuo consenso</strong>. Nell’ipotesi in cui, ove da noi richiesto, Tu decida di non prestare il consenso, tale scelta potrà condizionare e compromettere parzialmente la fruizione da parte Tua dei servizi che Ti abbiamo sopra descritto. Quali sono questi casi? La richiesta di iscrizione ad una mailing list, per esempio, per ricevere da noi informazioni di natura commerciale e promozionale, la richiesta di trasferire le Tue informazioni a terze parti.</p>
+<p>4. <strong>Per finalità di marketing</strong>: se tu, UTENTE, fornisci il consenso alla profilazione e alle attività di marketing, il Titolare tratterà i tuoi dati personali per inviarti informazioni personalizzate sui prodotti o servizi attraverso mezzi diversi (come e-mail o SMS).</p>
+<p>Di conseguenza, occorre tenere presente che tale trattamento dati comporta l'analisi del profilo utente o cliente per determinare le preferenze e, pertanto, quali prodotti e servizi si adattino meglio al suo stile.</p>
+<p>Nel caso in cui Tu, UTENTE ti sia avvalso di un servizio da noi offerto, potremmo trasmetterTi a mezzo e-mail informazioni di servizio (per esempio e-mail di benvenuto, e-mail di fidelizzazione e retention o e-mail transazionali), commerciali o promozioni su servizi migliorativi rispetto a quelli già acquistati, senza dover richiedere il consenso (<em>cd. soft spam</em>). In tal caso la base giuridica del trattamento è il cd. <em>legittimo interesse</em> (art. 130, IV co, Codice Privacy e Considerando 47 GDPR). <strong>L’utente può opporsi in qualsiasi momento a tale trattamento.</strong></p>
+<p>Potremmo, altresì, avere interesse a effettuare campagne promozionali su ulteriori e/o nuovi servizi da noi offerti. In tale caso, la base giuridica del trattamento è il consenso espresso, che Tu puoi liberamente prestare o rifiutare.</p>
+<p><u>Si fa presente agli Utenti che, ove i loro Dati fossero trattati con finalità di marketing diretto, <strong>possono opporsi al trattamento in qualsiasi momento, gratuitamente e senza fornire alcuna motivazione</strong>. Qualora gli Utenti si oppongano al trattamento per finalità di marketing diretto, i Dati Personali non sono più oggetto di trattamento per tali finalità</u>.</p>
+<p>5. <strong>Per contattare l'Utente</strong>: l'Utente che il Titolare intenda contattare per qualunque richiesta o informazione sui servizi/prodotti offerti.</p>
+<p>6. Vi sono, infine, alcune finalità per le quali il trattamento dei Tuoi dati personali ha una base giuridica diversa sia dal contratto, che dal consenso. Tra queste finalità vi è <strong><em>l’adempimento di obblighi legali</em></strong> che ci sono imposti da leggi vigenti, da regolamenti o dalla normativa comunitaria, o il soddisfare richieste provenienti dalle Autorità o ancora la difesa in giudizio, vale a dire che i Tuoi dati personali potranno da noi essere utilizzati in giudizio o nelle fasi precedenti, nell’ipotesi in cui vi siano abusi da parte Tua nell’utilizzo della nostra piattaforma o dei ns. servizi (ad es. frode, spam, furto di identità etc.).</p>
+<p>7. <strong>Per finalità di ricerche/analisi statistiche</strong> volti a misurare il funzionamento del Sito, misurare il traffico e valutare usabilità e interesse. Tali ricerche e analisi hanno ad oggetto dati aggregati o anonimi, per cui non è possibile identificare l’Utente. Questo tipo di trattamento può, quindi, essere effettuato liberamente dal Titolare perché non si basa su dati personali.</p>
+<p>Il conferimento dei Dati Personali per la finalità sopra elencate è <em>facoltativo</em>, ma il loro eventuale mancato conferimento potrebbe rendere impossibile per la Società riscontrare una richiesta o adempiere ad un obbligo legale a cui essa potrebbe essere soggetta.</p>
+<p>8. Per finalità di <strong>PROGETTO DI RICERCA</strong> e Condivisione con Terze Parti: l’Applicazione potrà, con il consenso esplicito dell’Utente, utilizzare i dati raccolti per finalità di <em>RICERCA E SVILUPPO sistema automatizzato di riduzione sprechi alimentari.</em></p>
+<p>Tuttavia, il GDPR impone regole chiare per proteggere la privacy delle persone:</p>
+<ul>
+<li><p><strong>Consenso esplicito</strong> – Il titolare dei dati deve dare un'autorizzazione chiara e informata per l’uso dei suoi dati a fini commerciali.</p></li>
+<li><p><strong>Trasparenza</strong> – L’azienda deve spiegare in modo comprensibile come verranno usati i dati.</p></li>
+<li><p><strong>Diritto di controllo</strong> – Le persone devono poter accedere ai propri dati, correggerli, cancellarli o limitarne l’uso.</p></li>
+<li><p><strong>Protezione dei dati</strong> – Le aziende devono adottare misure di sicurezza per evitare usi impropri o violazioni.</p></li>
+</ul>
+<p>9. Comunicazione dell’indirizzo e-mail dei vincitori all’ufficio Innovation e HR dell’azienda ospitante (Autogrill Italia S.p.A.) per la gestione e l’assegnazione dei premi aziendali. La base giuridica di questo trattamento è il consenso specifico e distinto dell’interessato (art. 6, par. 1, lett. a, GDPR), raccolto separatamente tramite apposito flag dedicato. Il conferimento è facoltativo: in assenza del consenso l’Utente potrà comunque partecipare al progetto, ma non potrà ricevere i premi aziendali che richiedono il coinvolgimento dell’ufficio Innovation e HR. Per tale finalità Autogrill agisce quale titolare autonomo del trattamento; sono comunicati unicamente gli indirizzi e-mail dei vincitori e per il solo tempo necessario alla consegna del premio.</p>
+<p><strong>Ricapitolando</strong> dunque:</p>
+<ol type="a">
+<li><em>Finalità del trattamento dei dati per cui la base di liceità è l’esecuzione e gestione del contratto e gli adempimenti ad obblighi di legge connessi</em></li>
+</ol>
+<ol type="1">
+<li><p>Esecuzione e gestione del contratto</p></li>
+<li><p>Identificazione e registrazione dell’Utente</p></li>
+<li><p>Adempimento di obblighi di legge, connessi al rapporto contrattuale</p></li>
+<li><p>Eventuali collaborazioni professionali esterne per l’adempimento degli obblighi di legge</p></li>
+<li><p>Tutela dei diritti contrattuali</p></li>
+<li><p>Analisi statistiche</p></li>
+</ol>
+<p>b. <em>Finalità del trattamento dei dati per cui la base di liceità è <strong>esplicito consenso</strong> prestato dall’interessato</em></p>
+<ol type="1">
+<li><p>comunicazioni di servizio, di marketing, commerciali o promozionali</p></li>
+<li><p>risposta a questionari</p></li>
+<li><p>condivisione con terze parti:</p>
+<ul>
+<li><p>Partner accademici e di ricerca impegnati nello studio, previo accordo di riservatezza;</p></li>
+<li><p>Enti pubblici o privati in caso di obblighi normativi;</p></li>
+<li><p>Piattaforme di elaborazione dati su cloud con adeguate misure di sicurezza.</p></li>
+</ul></li>
+</ol>
+<p>I dati personali saranno trattati in modo <em>lecito, corretto e trasparente</em> nei confronti dell’Interessato e raccolti per finalità determinate, esplicite e legittime, e successivamente trattati in modo che non sia incompatibile con tali finalità.</p>
+<p><u>Sempre in un’ottica di <strong>fiducia e trasparenza</strong>, occorre ribadire quanto segue:</u></p>
+<p><u>Gli utenti/visitatori dovranno leggere attentamente la presente Privacy Policy prima di inoltrare qualsiasi tipo di informazione personale e/o compilare qualunque modulo elettronico presente sul sito stesso.</u></p>
+<p>In quanto potrebbero essere presenti:</p>
+<h2 id="link-a-siti-di-terze-parti-e-social-plugin">LINK A SITI DI TERZE PARTI E SOCIAL PLUGIN</h2>
+<p>Il Titolare non controlla e non ha modo di supervisionare né il contenuto, né le policy sul trattamento dei dati personali dei siti web e dei servizi di terze parti accessibili attraverso i link contenuti all’interno del Sito, ivi inclusi eventuali social plugin. Il Titolare non potrà, quindi, in nessun caso essere ritenuto responsabile dei trattamenti effettuati attraverso o in relazione a tali siti di terzi. Gli Utenti sono, pertanto, invitati a prendere visione della Privacy Policy e della Cookie Policy, nonché dei Termini di Servizio pubblicati su tali siti.</p>
+<h2 id="interazione-con-social-networks">Interazione con Social Networks</h2>
+<p>Nel caso in cui sia installato un servizio di interazione con i social network, è possibile che, anche nel caso gli Utenti non utilizzino il servizio, lo stesso raccolga dati di traffico relativi alle pagine in cui è installato.</p>
+<p>Pertanto potrebbero essere possibili interazioni con piattaforme social come:</p>
+<blockquote>
+<p><strong>Widget Linkedin (Linkedin Corporation)</strong></p>
+<p>Il widget Linkedin ed il pulsante “segui” sono servizi di interazione con il social network Linkedin, forniti da Linkedin Corporation</p>
+<p>Dati personali raccolti: Cookie e Dati di utilizzo.</p>
+<p>Luogo del trattamento: USA – <a href="https://www.linkedin.com/legal/privacy-policy">Privacy Policy</a></p>
+</blockquote>
+<p>Altro aspetto importante in una Privacy Policy è capire come vengono trattati i dati personali.</p>
+<h2 id="modalità-e-sicurezza-del-trattamento-dei-dati">MODALITÀ E SICUREZZA DEL TRATTAMENTO DEI DATI</h2>
+<p>I dati sono raccolti nel rispetto del principio di <u>minimizzazione dei dati</u> trattati (si acquisiscono solo i dati strettamente necessari per erogare i servizi richiesti o raggiungere le altre finalità qui specificate). Il trattamento dei dati personali da parte della Società avviene mediante strumenti manuali, informatici e telematici con logiche strettamente correlate alle citate finalità. Le operazioni di trattamento sono svolte in modo da garantire la sicurezza dei dati e dei sistemi. Sono adottate misure di sicurezza adeguate al fine di ridurre al minimo i rischi di distruzione o di perdita, anche accidentale, dei dati stessi, di accesso non autorizzato, di trattamento non consentito o non conforme rispetto alle finalità indicate nella presente informativa. Le misure di sicurezza adottate, tuttavia, non consentono di escludere, in via assoluta, i rischi di intercettazione o compromissione dei dati personali trasmessi con strumenti telematici. Ti invitiamo pertanto a verificare che il Tuo dispositivo (Pc, smartphone, tablet etc.) sia dotato di sistemi software adeguati alla protezione della trasmissione telematica di dati, sia in entrata, che in uscita (come, ad esempio, sistemi antivirus aggiornati, firewall e filtri antispam).</p>
+<p>In particolare, saranno adottate le seguenti misure di sicurezza:</p>
+<ul>
+<li><p>Crittografia dei dati sensibili per evitare accessi non autorizzati;</p></li>
+<li><p>Controllo degli accessi per limitare la gestione dei dati ai soli operatori autorizzati;</p></li>
+<li><p>Monitoraggio continuo dei sistemi per prevenire e rilevare eventuali violazioni;</p></li>
+<li><p>Configurazione di backup automatici del database</p></li>
+<li><p>Monitoraggio dei <u>trattamenti automatizzati</u> per garantire che le decisioni non pregiudichino in modo significativo i diritti e le libertà degli interessati. In caso di decisioni basate esclusivamente su trattamenti automatizzati, l’utente ha il diritto di richiedere un intervento umano e di contestare la decisione.</p></li>
+</ul>
+<p>Altro fattore importante è conoscere per quanto tempo e dove verranno tenuti i Tuoi dati personali.</p>
+<h2 id="per-quanto-tempo-conserviamo-i-tuoi-dati-personali">PER QUANTO TEMPO CONSERVIAMO I TUOI DATI PERSONALI?</h2>
+<p>I Dati sono trattati e conservati per il tempo richiesto dalle finalità per le quali sono stati raccolti. I dati personali conferiti per la fornitura dei servizi offerti da questa App saranno conservati per il periodo di tempo necessario all’erogazione degli stessi, entro i tempi previsti e ammessi dalla normativa italiana a tutela dei propri interessi (e comunque non oltre i termini di cui agli artt. 2946 c.c. e ss. - prescrizione), ovvero per l'intera durata dei servizi richiesti e conservati per 12 mesi successivi per completare le attività amministrative. Inoltre, i dati saranno archiviati come richiesto per adempiere agli obblighi di legge.</p>
+<p>I Dati Personali raccolti per finalità riconducibili all’interesse legittimo del Titolare saranno trattenuti sino al soddisfacimento di tale interesse.</p>
+<p>Se hai deciso di iscriverTi ad una <em>mailing list</em> per finalità promozionali, i dati personali saranno conservati per un periodo non superiore a due anni dal conferimento degli stessi, fermo restando che puoi disiscriverti dal servizio in qualsiasi momento tramite il link “UNSCRIBE” presente in calce ad ogni comunicazione.</p>
+<p>In generale, tutti i dati trattati sulla base del Tuo consenso sono conservati fino a quando detto consenso non venga da Te revocato. Il Titolare potrebbe, però, essere obbligato a conservare i dati personali per un periodo più lungo in ottemperanza ad un obbligo di legge o per ordine di un’Autorità.</p>
+<p>Al termine del periodo di conservazione, i Dati Personali saranno cancellati. Pertanto, allo spirare di tale termine il diritto di accesso, cancellazione, rettificazione ed il diritto alla portabilità dei Dati non potranno più essere esercitati.</p>
+<p>Maggiori informazioni in merito al periodo di conservazione dei dati e ai criteri utilizzati per determinare tale periodo possono essere da Te richieste al Titolare all’indirizzo di posta elettronica: <a href="mailto:info@behavix.it">info@behavix.it</a></p>
+<h2 id="dove-vengono-trattati-i-tuoi-dati-personali">DOVE VENGONO TRATTATI I TUOI DATI PERSONALI?</h2>
+<p>I dati personali raccolti tramite questa App sono trattati presso le sedi operative del Titolare ed in ogni altro luogo in cui i soggetti coinvolti nel trattamento, autorizzati o responsabili/sub responsabili del trattamento, siano localizzati. È utilizzato principalmente un server localizzato in territorio europeo (Microsoft Azure, Unione Europea). Tuttavia, l’utilizzo di strumenti di analisi di terze parti (Google Analytics 4, Microsoft Clarity), attivati solo previo consenso dell’Utente, può comportare il trasferimento di alcuni dati verso gli Stati Uniti; in tali casi, sono adottate garanzie adeguate ai sensi del GDPR, come clausole contrattuali standard o certificazioni di conformità agli standard di protezione europei. Qualora, inoltre, si rendesse necessario il trasferimento dei tuoi Dati in un altro Paese extra-UE, questo sarà compiuto nel rispetto degli obblighi previsti dal capo V del GDPR, adottando tutte le cautele per garantire la sicurezza del trasferimento e dandone adeguata informazione.</p>
+<p>Per ulteriori informazioni, Ti invitiamo a contattare il Titolare.</p>
+<h2 id="modifiche-alla-informativa-privacy">MODIFICHE ALLA INFORMATIVA PRIVACY</h2>
+<p>Questa App si riserva di apportare modifiche o aggiornare il contenuto della presente informativa, anche in conseguenza delle possibili variazioni della normativa applicabile. Sarai informato di tali variazioni al momento della loro introduzione e avranno effetto vincolante al momento della relativa pubblicazione sul Sito. Per prendere, quindi, cognizione della versione più aggiornata della Privacy Policy, Ti invitiamo a visitare regolarmente questa sezione del sito, in modo da essere costantemente informato sull’uso e sui tipi di dati raccolti dal Titolare.</p>
+
+
+    </div>
+  </section>
+
+  <!-- EN -->
+  <section id="lang-en" data-lang="en" hidden>
+    <div class="hero">
+      <span class="eyebrow">Privacy Policy · Autogrill</span>
+      <h1>Information Notice on Data Processing</h1>
+      <p class="subtitle">Experimental project "Monitoraggio e Prevenzione dello Spreco Alimentare attraverso Interventi Comportamentali e Digitali"</p>
+      <span class="updated">Last update: 22/07/2026</span>
+    </div>
+    <nav class="toc" id="toc-en" aria-label="Contents"><h2>Contents</h2><ol></ol></nav>
+    <div class="content" id="content-en">
+<p><em>Dear User,</em></p>
+<p>Behavix Srl Società Benefit is an innovative startup that needs your collaboration. The project we are involving you in was created with the goal of helping to reduce food waste, through a joint initiative between Behavix Srl SB and (Autogrill), to launch an experimental program within the cafeteria (the Autogrill company restaurants identified for the project), which may later be extended to other cafeterias.</p>
+<p>Our target users are individuals aged 18 and over who study or work and they attend the cafeteria/restaurant at (the Autogrill company restaurants identified for the project), as well as external individuals who wish to take part in the initiative. Participation in the data collection process is entirely voluntary. We specifically collect identifiable data only from individuals who have explicitly agreed to participate as volunteers.</p>
+<p>Other individuals may choose to provide data anonymously, ensuring full protection of their privacy. Furthermore, those who prefer not to take part in the study are completely free to abstain without any obligation. This approach ensures ethical data collection, respecting users’ preferences and complying with privacy regulations.</p>
+<p>Why are we telling you all this? Because, if you give us your consent, we will use the personal and “special category” data you choose to provide to improve the cafeteria service and develop a system to prevent or reduce food waste. If you are interested in contributing and supporting us, we invite you to continue reading this notice.</p>
+<p>Your privacy is important to us. In this notice, pursuant to Article 13 of the European Regulation on the Protection of Personal Data (EU Regulation 2016/679 – hereinafter “GDPR”), we clearly and transparently explain how we collect, use, protect, and store your personal data, as well as which rights you can exercise when using the Behavix platform.</p>
+<p>This Privacy Policy aims to describe how the platform/app is managed with regard to the processing of personal data of users/visitors who access it. It is also provided pursuant to Article 13 of Legislative Decree No. 196/03 – Personal Data Protection Code – to those who connect to the platform/app and use its services, ensuring full compliance with data protection legislation.</p>
+<p>Let’s start with the key piece of information — who manages your personal data, that is, who is the <strong>DATA CONTROLLER</strong>:</p>
+<h2 id="who-is-the-data-controller">WHO IS THE DATA CONTROLLER?</h2>
+<p>The GDPR defines the Data Controller as <em>“the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data.”</em></p>
+<p>The Data Controller is therefore the entity that decides <strong>“why”</strong> and <strong>“how”</strong> personal data should be processed, without taking instructions from others.</p>
+<p>The Data Controller for this website is <strong>Behavix Srl Società Benefit</strong>, located at Via Tacchi 1, Rovereto (TN) 38068, Italy.</p>
+<p>You can contact the Data Controller at the following email address: <strong>info@behavix.it</strong></p>
+<p>The Data Controller may entrust certain data processing activities to other individuals or companies; however, such entities must be specifically designated as <strong>Data Processors</strong> (pursuant to Article 28 of the GDPR) and must receive clear and precise instructions on how to handle the data, while ensuring appropriate standards of security and lawfulness in all entrusted processing activities.</p>
+<p><strong>To help you better understand all the information contained in this document — which you, as a</strong> USER<strong>, have the right to know clearly and transparently — we will now provide a concise and simple explanation of what is meant by <em>personal data</em>.</strong></p>
+<h2 id="what-is-meant-by-personal-data">WHAT IS MEANT BY PERSONAL DATA?</h2>
+<p>This term refers to information about a natural person — specifically, any information through which that person is or can be identified, such as their habits, lifestyle, personal relationships, health status, or economic situation.</p>
+<p>Personal data, also called <strong>“common” personal data</strong>, directly identifying an individual include, for example, personal details (such as name and surname) and images.</p>
+<p>Personal data that indirectly identify an individual include, for example, phone number, tax code, IP address, email address, license plate number, credit card details, and so on.</p>
+<p>There are also so-called <strong>“special category”</strong> or <strong>“sensitive”</strong> data, which include genetic data, biometric data, health data, data concerning a person’s sex life or sexual orientation, as well as data revealing racial or ethnic origin, religious or philosophical beliefs, political opinions, or trade union membership.</p>
+<p>Additionally, there are <strong>“judicial” data</strong>, meaning data that reveal criminal convictions, security measures, or the status of being a suspect or defendant.</p>
+<p>Finally, highly significant personal data also include information related to <strong>electronic communications</strong> (via the Internet or phone) and <strong>geolocation data</strong>, as these can provide details about a person’s whereabouts and movements.</p>
+<h2 id="who-do-we-share-personal-data-with">WHO DO WE SHARE PERSONAL DATA WITH?</h2>
+<p>For the purposes of data processing, we may share your personal data with:</p>
+<ul>
+<li><p><strong>Authorized persons</strong> (pursuant to Article 29 of the GDPR) designated by the Data Controller to carry out activities strictly related to the provision of this website’s services. These individuals operate under the direct authority of the Data Controller and are bound by confidentiality obligations, either by agreement or by law;</p></li>
+<li><p><strong>Data Processors and Sub-Processors</strong> (pursuant to Article 28 of the GDPR), meaning individuals or companies that cooperate with the Data Controller to achieve the various processing purposes, such as those delegated to perform technical maintenance of IT networks, manage operational or sales processes, or provide essential support services for the platform.<br />
+You can contact the Data Controller at: <strong>info@behavix.it</strong></p></li>
+<li><p><strong>Entities, organizations, or authorities</strong> to whom it is mandatory to disclose personal data under legal provisions or orders from public authorities.</p></li>
+</ul>
+<p>All Data Processors/Sub-Processors, as well as Authorized Persons, are formally appointed and listed in a dedicated register. If you would like more information about these entities, please do not hesitate to contact the Data Controller at the following email address: <strong>info@behavix.it</strong></p>
+<p>Accordingly, we may need to share your personal data with the following potential recipients:</p>
+<ul>
+<li><p>Consultants, accountants, or legal professionals providing services related to the purposes mentioned above;</p></li>
+<li><p>Banking institutions providing services related to the purposes mentioned above;</p></li>
+<li><p>Internal staff members who process data as part of their duties;</p></li>
+<li><p>Judicial or administrative authorities, for compliance with legal obligations;</p></li>
+<li><p>Service providers (individuals or companies) supporting the requested activities;</p></li>
+<li><p><strong>Universities and research institutions</strong>, to further develop and enhance the Behavix project.</p></li>
+<li><p>The Innovation and HR office of Autogrill Italia S.p.A., limited to the winners’ email address, for the sole purpose of managing and delivering the corporate prizes; for this processing, Autogrill acts as an autonomous data controller.</p></li>
+</ul>
+<p>Please note that personal data collected through the Platform are stored and processed using <strong>Microsoft Azure cloud services</strong>, with servers located within the <strong>EuropeanUnion</strong>. For statistical purposes and to analyze the user experience, the Platform also uses Google Analytics 4 and Microsoft Clarity, provided respectively by Google Ireland Limited and Microsoft Ireland Operations Limited, which are activated only with the User’s prior consent as described in our Cookie Policy.<br />
+The use of these services complies with the provider’s security standards and certifications, ensuring the protection and integrity of users’ data.</p>
+<p>Naturally, you — the <strong>USER</strong> — retain all your rights, which are listed in the following section.</p>
+<h2 id="what-are-your-rights-how-can-you-exercise-them-and-whom-should-you-contact">WHAT ARE YOUR RIGHTS, HOW CAN YOU EXERCISE THEM, AND WHOM SHOULD YOU CONTACT?</h2>
+<h3 id="your-rights">1. Your Rights</h3>
+<p>The rights you can exercise to protect your personal data are set out in Articles 15 and following of the GDPR.</p>
+<p>In particular, you have the right to:</p>
+<ul>
+<li><p>access your personal data and request their rectification, update, erasure, or restriction of processing if they are incomplete, inaccurate, or collected in violation of the law;</p></li>
+<li><p>object to processing for legitimate reasons or request data portability;</p></li>
+<li><p>obtain confirmation as to whether or not personal data concerning you exist, even if not yet recorded, and receive such data in an intelligible form.</p></li>
+</ul>
+<p>You also have the right to obtain:</p>
+<p>a) the indication of:</p>
+<ul>
+<li><p>the origin of the personal data;</p></li>
+<li><p>the purposes and methods of processing;</p></li>
+<li><p>the logic applied in case of processing carried out with the aid of electronic means;</p></li>
+<li><p>the identification details of the Data Controller, the Data Processor(s) (internal/external), and the persons or categories of persons to whom personal data may be communicated or who may become aware of them as authorized persons;</p></li>
+</ul>
+<p>b) the update, rectification, or — where relevant — integration of your data, within the limits of the activities carried out by the Data Controller;</p>
+<p>c) the erasure, anonymization, or blocking of data processed unlawfully, including those whose retention is unnecessary for the purposes for which they were collected or subsequently processed;</p>
+<p>d) confirmation that the operations referred to in points b) and c) have been notified to those to whom the data have been communicated, except where such notification proves impossible or involves a manifestly disproportionate effort compared to the right being protected;</p>
+<p>e) in the case of automated processing that produces significant effects, the right to obtain information on the logic involved and to request human intervention to review the decision.</p>
+<p>You also have the right to object, in whole or in part:</p>
+<p>f) for legitimate reasons, to the processing of personal data concerning you, even if relevant to the purpose of collection;</p>
+<p>g) to the processing of your personal data for the purpose of sending newsletters or other digital communications carried out for promotional purposes.</p>
+<h3 id="how-you-can-exercise-your-rights">2. How You Can Exercise Your Rights</h3>
+<p>You can send your request to the Data Controller at the following email address: <a href="mailto:<a href="mailto:info@behavix.it">info@behavix.it</a>"><strong>info@behavix.it</strong></a></p>
+<p>No specific formal requirements apply to your request, which you may also submit through a representative and renew for justified reasons. The Data Controller will respond as soon as possible, and in any case no later than <strong>one month</strong> from the date of receipt of the request (this period may be extended by two additional months in cases of complexity or multiple requests).</p>
+<p>If you do not receive a response or if you are not satisfied with it, you have the right to <strong>lodge a complaint</strong> with the <strong>Italian Data Protection Authority (Garante per la Protezione dei Dati Personali)</strong> (pursuant to Art. 77 GDPR and Art. 141 of the Italian Privacy Code), or to bring the matter before the competent <strong>judicial authorities</strong> (pursuant to Art. 79 GDPR and Art. 152 of the Italian Privacy Code).</p>
+<p>The complaint form and instructions on how to complete and submit it are available <a href="https://www.garanteprivacy.it/">here</a>.</p>
+<h2 id="data-processed-through-the-platformapp">DATA PROCESSED THROUGH THE PLATFORM/APP</h2>
+<p>Pursuant to Article 13 of the GDPR, and in relation to the personal data that <strong>Behavix Srl Società Benefit</strong> will have access to through the implementation of the project you are taking part in, we inform you as follows:</p>
+<p>There are essentially three main categories of parties that interact with Behavix:</p>
+<ul>
+<li><p><strong>Cafeteria end users</strong> – individuals who eat in the cafeteria;</p></li>
+<li><p><strong>Catering service providers</strong> – the company preparing the food;</p></li>
+<li><p><strong>Cafeteria hosts</strong> – the organization that uses the catering service to deliver meals to individuals.</p></li>
+</ul>
+<h3 id="types-of-data-collected">Types of Data Collected</h3>
+<ol type="1">
+<li><strong>Personal Data:</strong></li>
+</ol>
+<p>As part of the Project, the Data Controller collects the personal data of Users who have chosen to register a personal profile.</p>
+<p>Providing certain personal data is necessary for registration and for the use of the services offered (<strong>mandatory data</strong>), while other information is optional. Failure to provide the optional data will not affect your ability to participate in the Project.</p>
+<p>The Project therefore collects the following personal information from individuals who decide to register a personal area — some of which are optional and left to each person’s discretion whether to share them:</p>
+<ul>
+<li>name, surname, email address, gender, year of birth, height, weight, job role, sports habits, type of diet followed (e.g. omnivorous, vegetarian, etc.), possible intolerances or allergies (optional), daily water intake (optional), sedentary lifestyle (optional), personal goals or curiosities (optional), and interest in exploring topics related to food relationships (optional).</li>
+</ul>
+<p>Within our application, we use personal information to:</p>
+<ol type="i">
+<li><p><strong>Understand why users generate leftovers</strong> after their meals (for example, we might find that younger users tend to choose larger portions, leading to a higher amount of leftovers during service);</p></li>
+<li><p><strong>Inform users of their right to redeem rewards</strong> from any promotional initiatives or campaigns designed to increase user engagement within the Behavix project.</p></li>
+</ol>
+<p><strong>2. Generated Data:</strong></p>
+<p>Generated data refers to information created by a computer or automated process, rather than directly provided by a human source.</p>
+<p>In this context, such data may come from questionnaires that cafeteria users freely and voluntarily fill out through a web app, or from aggregated data that is freely provided in a completely anonymous form, which may be accessed by catering service providers or cafeteria managers.</p>
+<p><strong>3. Amount of Leftovers:</strong></p>
+<p>At the end of each meal service, operators will monitor the amount of food remaining on trays. Users will be able to view this information in their personal account.</p>
+<h3 id="disclaimer-for-false-or-misleading-statements">DISCLAIMER FOR FALSE OR MISLEADING STATEMENTS</h3>
+<p>You, as the <strong>USER</strong>, guarantee the truthfulness, accuracy, and up-to-date nature of the personal data provided to the Data Controller, and you assume full responsibility for any false, inaccurate, or incomplete information.</p>
+<p>The Data Controller cannot be held responsible for any false statements made by you, nor for any consequences resulting from the use of untrue data.</p>
+<p>Pursuant to Article 5, paragraph 1, letter d) of Regulation (EU) 2016/679 (GDPR), personal data must be accurate and, where necessary, kept up to date. The User is therefore required to communicate any corrections or additions. Providing false or inaccurate information may compromise the accuracy and lawfulness of data processing.</p>
+<h2 id="what-types-of-personal-data-do-we-collect-and-use-on-our-platform">WHAT TYPES OF PERSONAL DATA DO WE COLLECT AND USE ON OUR PLATFORM?</h2>
+<p>To make our platform/app accessible, functional, and high-performing, we use the following categories of personal data:</p>
+<ul>
+<li><p><strong>Identification and contact data:</strong> email and password, as well as name, surname, gender, year of birth, job role, height, weight, and sports routine;</p></li>
+<li><p><strong>Information related to food preferences and eating habits;</strong></p></li>
+<li><p><strong>Special category data</strong> (for example, information about food allergies or intolerances) — these are entirely <strong>optional</strong> and therefore <strong>not required</strong> for the normal use or provision of services through our app.</p></li>
+</ul>
+<p><strong><em><u>Please note:</u></em></strong></p>
+<p><strong>Please note that the Platform uses technical cookies that are strictly necessary for the operation of the service, for which no prior consent is required. The Platform also uses third-party analytics tools — specifically Google Analytics 4 and Microsoft Clarity — for statistical purposes and to improve the user experience (e.g., traffic analysis, anonymized session recording). These tools are activated only after the User’s explicit consent, requested via a dedicated cookie banner, and may involve the transfer of certain data to providers outside the EEA in accordance with the safeguards required by the GDPR. For the full list of cookies used, their purposes, retention periods, and how to manage or withdraw consent, please see our Cookie Policy.</strong></p>
+<p>Some of this data is provided directly by users, while other data may be collected through browsing activity, cookies, or tracking systems used within the platform.</p>
+<p>If any form of profiling were to take place, you will find detailed information on how we use such systems — particularly cookies — in a separate document called the <strong>Cookie Policy</strong>, available on our website and provided together with this notice. That document will also explain how to refuse certain types of cookies and will include a full list and explanation of the types of cookies used by us and by third-party providers.</p>
+<p>The categories of individuals whose data are processed and with whom we interact for our services include:</p>
+<ul>
+<li><p>Individuals using our app or services;</p></li>
+<li><p>Individuals working at the location(s) managed by <strong>Autogrill</strong>.</p></li>
+</ul>
+<h3 id="in-summary-to-provide-our-services-we-collect-the-following-personal-data">In summary, to provide our services, we collect the following personal data:</h3>
+<ul>
+<li><p><strong>Identification data:</strong> name, surname, email, password.</p></li>
+<li><p><strong>Special category data:</strong> gender, age, year of birth, weight, height.</p></li>
+<li><p><strong>Optional special category data:</strong> possible allergies or intolerances.</p></li>
+<li><p><strong>Preferences:</strong> job role and its impact on the time you spend seated, whether and how often you practice sports, what kind of sport you practice, how much water you drink per day, and any personal goals or curiosities you choose to share.</p></li>
+</ul>
+<p>Some of this information is <strong>optional</strong> and therefore <strong>not strictly necessary</strong> for the normal use or delivery of services provided through our app.</p>
+<h2 id="what-purposes-do-we-use-personal-data-for">WHAT PURPOSES DO WE USE PERSONAL DATA FOR?</h2>
+<p>The Application collects and processes users’ personal data for the following purposes:</p>
+<p>a) Account creation and communication.</p>
+<p>b) Participation in a project aimed at reducing food waste through the use of advanced technologies, such as automated analyses.</p>
+<p>c) Improvement of circular-economy processes related to meal management and waste reduction.</p>
+<p>d) Collection and analysis of data, including special-category data (for example, dietary preferences, allergies, consumption habits), to optimize food distribution.</p>
+<p>e) Development and validation of predictive models to improve the management of food resources and reduce the environmental impact of the cafeteria.</p>
+<p>f) Raising users’ awareness about sustainability and efficiency in food management.</p>
+<p>g) Use of automated processing in compliance with the provisions of the GDPR on automated decision-making processes (Article 22 GDPR), for the analysis and processing of the collected data, which may influence service delivery, personalization of the experience, and optimized resource management.</p>
+<p>h) Communication of the winners’ email address to the Innovation and HR office of the host company (Autogrill Italia S.p.A.) for the management and assignment of corporate prizes. The legal basis for this processing is the data subject’s specific and separate consent (Art. 6(1)(a) GDPR), collected through a dedicated opt-in. Providing it is optional: without this consent the User may still take part in the project but cannot receive the corporate prizes that require the involvement of the Innovation and HR office. For this purpose Autogrill acts as an autonomous data controller; only the winners’ email addresses are shared, for the time strictly necessary to deliver the prize.</p>
+<p>The legal basis for processing is the data subject’s consent (Art. 6(1)(a) and, for special-category data, Art. 9(2)(a) of the GDPR). Providing data is optional, but failure to give consent may make it impossible to participate in the study.</p>
+<p>Therefore, we process personal data for the following purposes:</p>
+<ol type="1">
+<li><p><strong>To manage registration as a USER/ACCOUNT on the platform/App</strong>:<br />
+If a User chooses to become a registered Account/User to access the platform/App, the Data Controller needs to process data to identify them as a platform user and authorize access to the various features, products and services available to registered users. The User may delete their account via the appropriate function within the web app or, alternatively, by contacting Customer Support in case of problems.</p></li>
+<li><p><strong>To provide our services.</strong><br />
+The legal basis for processing personal data for these purposes is Art. 6(1)(b) GDPR (performance of a contract or pre-contractual measures). Failure to provide personal data prevents the contractual relationship from being completed, since such data are necessary for the conclusion of the contract.</p></li>
+<li><p>In other cases, we cannot process your personal data without your consent.<br />
+If, when requested by us, you decide not to give consent, this choice may partially limit or prevent your use of some of the services described above. Examples include subscribing to a mailing list to receive commercial or promotional information or requesting the transfer of your information to third parties.</p></li>
+<li><p><strong>For marketing purposes</strong>:<br />
+If you, the USER, give consent to profiling and marketing activities, the Data Controller will process your personal data to send you personalized information about products or services through various means (e-mail or SMS).<br />
+This processing entails analysis of the user or customer profile to determine preferences and therefore which products and services best suit the user.<br />
+If you have used a service offered by us, we may send you service-related e-mails (e.g., welcome e-mails, retention/loyalty e-mails, or transactional e-mails), commercial communications, or promotions about upgraded services without needing prior consent (so-called “soft spam”). In this case the legal basis is our legitimate interest (Art. 130, 4th para., Italian Privacy Code and Recital 47 GDPR). The user may object to such processing at any time.<br />
+We may also run promotional campaigns about additional/new services we offer; in that case the legal basis is your explicit consent, which you may freely grant or refuse.<br />
+<u>Users are informed that, where their data are processed for direct marketing purposes, they can object to such processing at any time, free of charge and without giving reasons. If Users object to direct marketing processing, Personal Data will no longer be processed for those purposes.</u></p></li>
+<li><p><strong>To contact the User:</strong><br />
+where the Data Controller needs to contact the User for any request or information about the services/products offered.</p></li>
+<li><p>There are, finally, certain purposes for which the legal basis for processing your personal data differs from contract or consent. Among these are compliance with legal obligations imposed on us by applicable laws, regulations or EU rules, responding to requests from Authorities, or the defense of legal claims — i.e., your personal data may be used in legal proceedings or in preparatory stages if there are abuses in your use of our platform or services (e.g., fraud, spam, identity theft, etc.).</p></li>
+<li><p><strong>For research/statistical analysis purposes</strong> aimed at measuring the functioning of the Site, monitoring traffic, and assessing usability and interest. Such research and analyses concern aggregated or anonymous data that do not allow identification of the User. This type of processing may therefore be carried out freely by the Data Controller because it does not rely on personal data.</p></li>
+</ol>
+<p>Providing Personal Data for the purposes listed above is optional, but failure to provide them could make it impossible for the Company to respond to a request or comply with a legal obligation to which it may be subject.</p>
+<ol start="8" type="1">
+<li><strong>For RESEARCH PROJECT purposes</strong> and sharing with Third Parties:<br />
+The Application may, with the User’s explicit consent, use the collected data for R&amp;D purposes of the automated food-waste reduction system.<br />
+However, the GDPR imposes clear rules to protect people’s privacy:<br />
+• <strong>Explicit consent</strong> — the data subject must give a clear and informed authorization for the use of their data for commercial purposes;<br />
+• <strong>Transparency</strong> — the company must explain in an understandable way how the data will be used;<br />
+• <strong>Right of control</strong> — people must be able to access, correct, delete, or limit the use of their data;<br />
+• <strong>Data protection</strong> — companies must adopt security measures to prevent misuse or data breaches.</li>
+</ol>
+<p>In summary:</p>
+<p>a. Purposes for which the legal basis is performance and management of the contract and compliance with legal obligations:</p>
+<ol type="1">
+<li><p>Execution and management of the contract</p></li>
+<li><p>Identification and registration of the User</p></li>
+<li><p>Compliance with legal obligations related to the contractual relationship</p></li>
+<li><p>Possible external professional collaborations for compliance with legal obligations</p></li>
+<li><p>Protection of contractual rights</p></li>
+<li><p>Statistical analyses</p></li>
+</ol>
+<p>b. Purposes for which the legal basis is the data subject’s explicit consent:</p>
+<ol type="1">
+<li><p>Service communications, marketing, commercial or promotional communications</p></li>
+<li><p>Responses to questionnaires</p></li>
+<li><p>Sharing with third parties:</p></li>
+</ol>
+<blockquote>
+<p>• Academic and research partners involved in the study, subject to confidentiality agreements;</p>
+<p>• Public or private bodies in cases of legal obligations;</p>
+<p>• Cloud data-processing platforms with adequate security measures.</p>
+</blockquote>
+<p>Personal data will be processed lawfully, fairly and transparently with respect to the Data Subject, collected for specified, explicit and legitimate purposes and subsequently processed in a manner that is not incompatible with those purposes.</p>
+<p>Always with a view to trust and transparency, the following should also be reiterated:<br />
+Users/visitors must read this Privacy Policy carefully before submitting any personal information and/or completing any electronic form on the site, as there may be:</p>
+<h2 id="links-to-third-party-websites-and-social-plugins">LINKS TO THIRD-PARTY WEBSITES AND SOCIAL PLUGINS</h2>
+<p>The Data Controller does not control, nor is able to monitor, either the content or the personal data processing policies of third-party websites and services accessible through links contained on the Website, including any social plugins. Therefore, the Data Controller cannot, under any circumstances, be held responsible for processing carried out through or in connection with such third-party sites.</p>
+<p>Users are therefore encouraged to review the Privacy Policy, Cookie Policy, and Terms of Service published on those external websites.</p>
+<ul>
+<li><strong>Interaction with Social Networks</strong></li>
+</ul>
+<blockquote>
+<p>If a social network interaction service is installed, it is possible that, even if Users do not use the service, it may still collect traffic data relating to the pages where it is installed.</p>
+<p>Possible interactions may occur with social platforms such as:</p>
+</blockquote>
+<p><strong>LinkedIn Widget (LinkedIn Corporation)</strong></p>
+<p>The LinkedIn widget and the “Follow” button are services for interacting with the LinkedIn social network, provided by LinkedIn Corporation.</p>
+<p><strong>Personal data collected:</strong> Cookies and Usage Data.</p>
+<p><strong>Place of processing:</strong> USA – <a href="https://www.linkedin.com/legal/privacy-policy">Privacy Policy</a></p>
+<h2 id="methods-and-security-of-data-processing">METHODS AND SECURITY OF DATA PROCESSING</h2>
+<p>Data are collected in compliance with the principle of <strong>data minimization</strong> (only the data strictly necessary to provide the requested services or achieve the purposes specified herein are acquired). The processing of personal data by the Company is carried out using <strong>manual, IT, and telematic tools</strong> with logic strictly related to the purposes described above.</p>
+<p>Processing operations are performed in a way that ensures the <strong>security of data and systems</strong>. Appropriate security measures are adopted to minimize the risks of destruction or loss (even accidental), unauthorized access, and unlawful or non-compliant processing with respect to the purposes indicated in this privacy notice.</p>
+<p>However, the adopted security measures <strong>cannot completely eliminate the risk</strong> of interception or compromise of personal data transmitted via telematic means.</p>
+<p>You are therefore encouraged to ensure that your device (PC, smartphone, tablet, etc.) is equipped with adequate software to protect telematic data transmission, both incoming and outgoing (for example, updated antivirus systems, firewalls, and anti-spam filters).</p>
+<h3 id="specific-security-measures-adopted">Specific Security Measures Adopted:</h3>
+<ul>
+<li><p><strong>Encryption of sensitive data</strong> to prevent unauthorized access;</p></li>
+<li><p><strong>Access control</strong> to limit data management to authorized operators only;</p></li>
+<li><p><strong>Continuous system monitoring</strong> to prevent and detect potential violations;</p></li>
+<li><p><strong>Automatic database backups</strong>;</p></li>
+<li><p><strong>Monitoring of automated processing</strong> to ensure that decisions do not significantly affect the rights and freedoms of data subjects. In cases of decisions based solely on automated processing, the user has the right to request human intervention and to contest the decision.</p></li>
+</ul>
+<p>Another important aspect is knowing <strong>how long and where your personal data will be stored</strong>, which is addressed in the following sections.</p>
+<h2 id="how-long-do-we-keep-your-personal-data">HOW LONG DO WE KEEP YOUR PERSONAL DATA?</h2>
+<p>Personal data are processed and stored for the period required to achieve the purposes for which they were collected.</p>
+<ul>
+<li><p><strong>For services provided through the App:</strong> personal data will be kept for the time necessary to deliver the requested services, within the limits permitted by Italian law to protect our interests (and in any case no longer than the terms established by Articles 2946 et seq. of the Italian Civil Code – statute of limitations), or for the entire duration of the requested services and an additional <strong>12 months</strong> thereafter to complete administrative activities. Data may also be archived as required to comply with legal obligations.</p></li>
+<li><p><strong>For purposes based on the legitimate interest of the Data Controller:</strong> data will be retained until that interest is fulfilled.</p></li>
+<li><p><strong>For mailing lists or promotional communications:</strong> personal data will be stored for a period <strong>not exceeding two years</strong> from the date of collection, subject to your right to unsubscribe at any time via the “UNSUBSCRIBE” link provided at the bottom of each communication.</p></li>
+<li><p><strong>Based on your consent:</strong> all data processed on the basis of your consent will be retained until such consent is revoked. However, the Data Controller may be legally required to retain personal data for a longer period in compliance with legal obligations or orders from Authorities.</p></li>
+</ul>
+<p>At the end of the retention period, personal data will be <strong>deleted</strong>. Consequently, after this period, your rights to access, delete, rectify, or request data portability will no longer be exercisable.</p>
+<p>For more information about retention periods and the criteria used to determine them, you may contact the Data Controller at: <a href="mailto:<a href="mailto:info@behavix.it">info@behavix.it</a>"><strong>info@behavix.it</strong></a>.</p>
+<h2 id="where-are-your-personal-data-processed">WHERE ARE YOUR PERSONAL DATA PROCESSED?</h2>
+<p>Personal data collected through this App are processed at the Data Controller’s operational offices and at any other location where the parties involved in processing—whether authorized or acting as data processors/sub-processors—are situated.</p>
+<p>A server located within the <strong>European territory</strong> is used (Microsoft Azure, European Union). However, the use of third-party analytics tools (Google Analytics 4, Microsoft Clarity), activated only with the User’s consent, may involve the transfer of certain data to the United States, in compliance with the safeguards required by the GDPR, such as <strong>standard contractual clauses</strong> or certifications of compliance with European data protection standards.</p>
+<p>Furthermore, if your data were to be transferred to a non-EU country, this would be carried out in compliance with <strong>Chapter V of the GDPR</strong>, implementing all necessary measures to ensure the security of the transfer and providing you with adequate information.</p>
+<p>For further information, you are invited to contact the Data Controller.</p>
+<h2 id="changes-to-the-privacy-policy">CHANGES TO THE PRIVACY POLICY</h2>
+<p>This App reserves the right to modify or update the content of this privacy notice, also as a result of possible changes in applicable law. You will be informed of such changes at the time they are introduced, and they will become binding upon publication on the Website.</p>
+<p>To stay informed about the most up-to-date version of the Privacy Policy, we encourage you to <strong>regularly visit this section of the site</strong>, so you remain aware of how your data are used and the types of data collected by the Data Controller.</p>
+
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="fi">
+    <div class="company">
+      Behavix srl Societ&agrave; Benefit &middot; P.IVA 02761450226<br>
+      Via Tacchi 1, Rovereto (TN) 38068, Italy<br>
+      <span class="muted">&copy; <span id="yr"></span> Behavix. All Rights Reserved.</span>
+    </div>
+    <div><a href="mailto:info@behavix.it">info@behavix.it</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function slugify(t){return t.toLowerCase().replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-').slice(0,60);}
+  function buildTOC(lang){
+    var content=document.getElementById('content-'+lang);
+    var ol=document.querySelector('#toc-'+lang+' ol');
+    if(!content||!ol||ol.childElementCount)return;
+    var hs=content.querySelectorAll('h2');
+    hs.forEach(function(h,i){
+      if(!h.id) h.id=lang+'-'+(slugify(h.textContent)||('sec'+i));
+      var li=document.createElement('li');
+      var a=document.createElement('a'); a.href='#'+h.id; a.textContent=h.textContent;
+      li.appendChild(a); ol.appendChild(li);
+    });
+  }
+  function setLang(lang){
+    var other = lang==='it'?'en':'it';
+    document.getElementById('lang-'+lang).hidden=false;
+    document.getElementById('lang-'+other).hidden=true;
+    document.getElementById('btn-'+lang).classList.add('active');
+    document.getElementById('btn-'+other).classList.remove('active');
+    document.getElementById('btn-'+lang).setAttribute('aria-pressed','true');
+    document.getElementById('btn-'+other).setAttribute('aria-pressed','false');
+    document.documentElement.lang=lang;
+    buildTOC(lang);
+    try{history.replaceState(null,'', '#'+lang);}catch(e){}
+    window.scrollTo({top:0});
+  }
+  buildTOC('it'); buildTOC('en');
+  if(location.hash==='#en') setLang('en');
+</script>
+</body>
+</html>

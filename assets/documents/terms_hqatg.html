@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termini e Condizioni · Autogrill | Behavix</title>
+<meta name="description" content="Termini e Condizioni del Servizio della piattaforma Behavix per la riduzione dello spreco alimentare.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --appbar:#022C22; --appbar-hover:#04382c;
+    --primary:#064E3B; --primary-tint:#E1F0E8;
+    --accent:#EAB308; --accent-strong:#F59E0B; --accent-wash:#FFFBEB; --on-accent:#062524;
+    --page:#F8FAFC; --surface:#FFFFFF; --surface-warm:#FCFCF5;
+    --ink:#1E293B; --ink-muted:#64748B; --border:#E7ECEA;
+    --radius-card:24px; --radius-input:16px; --radius-pill:100px;
+    --shadow-card:0 8px 24px -6px rgba(6,78,59,0.08);
+    --maxw:860px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--page); color:var(--ink);
+    font-family:"Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  /* Appbar */
+  .appbar{
+    position:sticky; top:0; z-index:50; background:var(--appbar); color:#fff;
+    box-shadow:0 2px 12px rgba(2,44,34,.25);
+  }
+  .appbar-inner{
+    max-width:var(--maxw); margin:0 auto; padding:12px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:#fff;}
+  .brand img{height:40px; width:40px; border-radius:10px; display:block;}
+  .brand span{font-weight:800; letter-spacing:.14em; font-size:1.05rem;}
+  .lang-switch{display:inline-flex; background:rgba(255,255,255,.12); border-radius:var(--radius-pill); padding:4px;}
+  .lang-switch button{
+    border:0; background:transparent; color:rgba(255,255,255,.75);
+    font-family:inherit; font-weight:700; font-size:.82rem; letter-spacing:.03em;
+    padding:6px 16px; border-radius:var(--radius-pill); cursor:pointer; transition:all .15s ease;
+  }
+  .lang-switch button.active{background:var(--accent); color:var(--on-accent);}
+  .lang-switch button:not(.active):hover{color:#fff;}
+  /* Layout */
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px;}
+  .hero{
+    background:var(--surface); border-radius:var(--radius-card); box-shadow:var(--shadow-card);
+    padding:36px 34px; border:1px solid var(--border); position:relative; overflow:hidden;
+  }
+  .hero::before{content:""; position:absolute; left:0; top:0; bottom:0; width:6px; background:var(--accent);}
+  .hero .eyebrow{
+    display:inline-block; background:var(--primary-tint); color:var(--primary);
+    font-weight:700; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+    padding:6px 14px; border-radius:var(--radius-pill); margin-bottom:14px;
+  }
+  .hero h1{margin:0 0 10px; color:var(--primary); font-size:2rem; font-weight:800; line-height:1.2;}
+  .hero .subtitle{margin:0 0 18px; color:var(--ink-muted); font-size:1rem; font-weight:500;}
+  .hero .updated{
+    display:inline-flex; align-items:center; gap:8px; background:var(--accent-wash);
+    color:var(--on-accent); border:1px solid var(--accent-tint,#FDE68A);
+    font-weight:600; font-size:.82rem; padding:7px 14px; border-radius:var(--radius-pill);
+  }
+  .hero .updated::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--accent-strong);}
+  /* TOC */
+  .toc{
+    background:var(--surface-warm); border:1px solid var(--border); border-radius:var(--radius-card);
+    box-shadow:var(--shadow-card); padding:22px 26px; margin:24px 0;
+  }
+  .toc h2{margin:0 0 12px; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-muted); font-weight:700;}
+  .toc ol{margin:0; padding:0; counter-reset:toc; list-style:none;}
+  .toc li{counter-increment:toc; margin:0;}
+  .toc a{
+    display:flex; gap:12px; align-items:baseline; text-decoration:none; color:var(--ink);
+    padding:8px 10px; border-radius:12px; transition:background .12s ease, color .12s ease; font-weight:500; font-size:.95rem;
+  }
+  .toc a::before{content:counter(toc,decimal-leading-zero); color:var(--accent-strong); font-weight:700; font-size:.82rem; min-width:26px;}
+  .toc a:hover{background:var(--primary-tint); color:var(--primary);}
+  /* Content */
+  .content{
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-card);
+    box-shadow:var(--shadow-card); padding:14px 34px 34px;
+  }
+  .content h2{
+    color:var(--primary); font-size:1.28rem; font-weight:800; line-height:1.3;
+    margin:2.2em 0 .6em; padding-left:16px; border-left:5px solid var(--accent); scroll-margin-top:84px;
+  }
+  .content h3{color:var(--appbar); font-size:1.06rem; font-weight:700; margin:1.6em 0 .5em; scroll-margin-top:84px;}
+  .content p{margin:0 0 1em;}
+  .content ul,.content ol{margin:0 0 1.1em; padding-left:1.3em;}
+  .content li{margin:.35em 0;}
+  .content ul li::marker{color:var(--accent-strong);}
+  .content a{color:var(--primary); font-weight:600; text-decoration:underline; text-underline-offset:2px;}
+  .content a:hover{color:var(--accent-strong);}
+  .content strong{color:var(--appbar); font-weight:700;}
+  .content u,.content .underline{text-decoration:underline; text-underline-offset:2px;}
+  .content blockquote{
+    margin:1.2em 0; padding:16px 20px; background:var(--accent-wash);
+    border:1px solid #FDE68A; border-radius:var(--radius-input); color:var(--on-accent);
+  }
+  .content blockquote p{margin:.3em 0;}
+  .content hr{border:0; border-top:1px solid var(--border); margin:2em 0;}
+  .content > p:first-of-type{font-size:1.05rem;}
+  /* Footer */
+  .site-footer{background:var(--appbar); color:#fff; padding:28px 20px;}
+  .site-footer .fi{max-width:var(--maxw); margin:0 auto; display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center;}
+  .site-footer .fi .company{font-size:.9rem; font-weight:500; line-height:1.7;}
+  .site-footer a{color:var(--accent); text-decoration:none; font-weight:600;}
+  .site-footer a:hover{text-decoration:underline;}
+  .site-footer .muted{color:rgba(255,255,255,.6); font-weight:400;}
+  [hidden]{display:none!important;}
+  @media (max-width:640px){
+    .hero{padding:26px 20px;} .hero h1{font-size:1.55rem;}
+    .content{padding:8px 18px 24px;} .content h2{font-size:1.12rem;}
+    .brand span{display:none;}
+  }
+  @media print{
+    .appbar,.lang-switch,.toc{display:none!important;}
+    .hero,.content{box-shadow:none; border:none; padding:0;}
+    body{background:#fff;} [hidden]{display:block!important;}
+  }
+</style>
+</head>
+<body>
+<header class="appbar">
+  <div class="appbar-inner">
+    <a class="brand" href="../../index.html">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAB8CAMAAACcwCSMAAABblBMVEUAAAD9/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f0E4eOaAAAAenRSTlMA/4VxAQRpcPsG8o+SO+38/jr61gnz9ewC9BTEFyXwHuHxoPdzG5Q4IwUxQ33IYhmVN0utUsKfxtJr1xK+CjXFTnpNwM2OydDZdNQLboZVYLt+o3WXImfm3ysPbT4y5GSwH4m4nUHMJ2PqtKvdmoJ4DSlQV4ulSEbosgmBZ6wAAAguSURBVHiczVvnQ9s6EJcfCYTsHZIQIBDCHmETaNlQWvZsoS2UVTrp7ut//2wNj2Bbw0l59yWKrLufJZ+ku9MJAG5yH440+Ecnn7xLhiUpnHz3ZHLU3zDS7eaXxEmZsR/jLZIp5cdXxjI1A3ZHNpdD5sCEQsubkVqMwGPfa3tgQq99j6uLfHI6xYaMaGrjpGrQb3x5HmiFvP7DqkB3T0RNpLeUl0bbD/z+g/bRpbKZCkbbux1DNw9XQiez/ttIpknfqCnTNejLJivhh5sdQfcUjJ3yzO0GGq0aNwb6sx5D8/y6ZWM6RQxqFpo9onal+WzHMBunAoLQ8RW9nLbdVja21v42/Rv7Holg9z7VyVj9zrF2uLcGdKyxXm5oV32Hxj/5y8XJ3TencXfUc3LH2zXm8jdOZgg/X9Yk7MV5WIe0cUvsC2psY8GrfbUhdr6vz1W2yzdi0Aq1vtfU9QUrUyml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" alt="Behavix">
+      <span>BEHAVIX</span>
+    </a>
+    <div class="lang-switch" role="group" aria-label="Lingua / Language">
+      <button id="btn-it" class="active" onclick="setLang('it')" aria-pressed="true">IT</button>
+      <button id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- IT -->
+  <section id="lang-it" data-lang="it">
+    <div class="hero">
+      <span class="eyebrow">Termini e Condizioni · Autogrill</span>
+      <h1>Termini e Condizioni del Servizio</h1>
+      <p class="subtitle">Condizioni di utilizzo della piattaforma Behavix per la riduzione dello spreco alimentare</p>
+      <span class="updated">Aggiornata al 22/07/2026</span>
+    </div>
+    <nav class="toc" id="toc-it" aria-label="Sommario"><h2>Sommario</h2><ol></ol></nav>
+    <div class="content" id="content-it">
+<h2 id="premessa">Premessa</h2>
+<ol type="1">
+<li><p>Behavix offre una una piattaforma digitale (di seguito anche “<em>Web app</em>” o “<em>Piattaforma</em>”) sviluppata per testare soluzioni digitali per la riduzione dello spreco alimentare nei luoghi di ristorazione collettiva.</p></li>
+<li><p>Nel perseguire il predetto obiettivo, la Piattaforma coinvolge attivamente le persone (di seguito anche “Utenti”) che usufruiscono del servizio di Autogrill Italia S.p.A.nelle location in gestione all’azienda, attraverso la raccolta di informazioni, feedback ed il monitoraggio degli sprechi alimentari.</p></li>
+<li><p>La partecipazione degli Utenti al progetto è volontaria e può essere svolta anche in forma anonima.</p></li>
+<li><p>Durante la sperimentazione, prevista per un periodo orientativo di 1-12 (rinnovabile) mesi, la Piattaforma verrà utilizzata per raccogliere i dati e monitorare il comportamento degli Utenti riguardo al consumo dei pasti della mensa; contestualmente, la Piattaforma fornisce agli Utenti un servizio di “reporting”, così che questi ultimi possono controllare a loro volta l’andamento degli sprechi nella mensa che frequentano.</p></li>
+<li><p>La gestione della Piattaforma è condotta da un team guidato Behavix S.r.l. Società Benefit ed alcuni collaboratori che possono essere dipendenti dell’azienda o collaboratori esterni (di seguito anche “Team di sviluppo”).</p></li>
+<li><p>I presenti Termini e Condizioni regolano la fornitura e l’utilizzo della Piattaforma da parte degli Utenti.</p></li>
+</ol>
+<h2 id="servizi-della-piattaforma">Servizi della Piattaforma</h2>
+<ol type="1">
+<li><p>La Piattaforma consente agli Utenti di svolgere quanto segue:</p>
+<ol type="1">
+<li><p><strong>Espressione di preferenze e feedback sui pasti consumati</strong>: l’utente può compilare, su base volontaria e con cadenza quotidiana, appositi moduli digitali (form) disponibili sulla Piattaforma, attraverso i quali può esprimere il proprio livello di appetito, esprimere il proprio grado di soddisfazione rispetto al pasto, indicare le ragioni dell’avanzo di cibo (ad es. quantità eccessiva, categorie di cibi non graditi etc.);</p></li>
+<li><p><strong>Visualizzazione di dati personalizzati</strong>: l’Utente, accedendo alla Piattaforma, può visualizzare i dati raccolti durante i pasti - secondo quanto deciso dal Team di Sviluppo - ed ottenere un quadro sintetico del consumo di cibo secondo i parametri della sperimentazione stessa. (c.d. Servizio di reporting).</p></li>
+</ol></li>
+</ol>
+<h2 id="natura-dei-servizi">Natura dei servizi</h2>
+<ol type="1">
+<li>La Piattaforma e i relativi servizi non hanno alcun costo per l’Utente e non sono finalizzati alla promozione o vendita di prodotti o servizi.</li>
+</ol>
+<h2 id="durata-del-servizio">Durata del servizio</h2>
+<ol type="1">
+<li><p>La Piattaforma, così come i relativi servizi, rimarranno attivi per la durata della sperimentazione (orientativamente per circa 1-12 (rinnovabile) mesi).</p></li>
+<li><p>Al termine della sperimentazione, la Piattaforma ed i relativi servizi potranno rimanere attivi ed accessibili agli utenti in base agli accordi tra Behavix srl Società Benefit e (Autogrill Italia S.p.A.). Per la conservazione dei dati raccolti durante la sperimentazione, che includono i dati personali dell’Utente e i dati di report, si applica l’art. 7, comma 5, dei presenti Termini e condizioni.</p></li>
+</ol>
+<h2 id="profilo-personale-e-area-riservata">Profilo personale e area riservata</h2>
+<ol type="1">
+<li>Il rilascio di feedback da parte degli utenti può avvenire in forma anonima, ma per poter accedere ai Servizi della Piattaforma, inclusi i servizi di reporting e la possibilità di partecipare all’assegnazione di premialità, è necessaria la creazione di un profilo personale da parte dell’Utente.</li>
+</ol>
+<p>Nel caso di premi aziendali riconosciuti nell’ambito del progetto, l’Utente vincitore prende atto che il proprio indirizzo e-mail sarà comunicato all’ufficio Innovation e HR dell’azienda ospitante Autogrill Italia S.p.A.al solo fine della gestione e della consegna del premio, previo specifico consenso prestato secondo quanto descritto nell’Informativa privacy.</p>
+<ul>
+<li>La procedura di registrazione, necessaria per la creazione del profilo personale, avviene tramite la piattaforma e l’utente sarà guidato nell’inserimento delle informazioni richieste per l’accesso all’area riservata.</li>
+</ul>
+<ol start="2" type="1">
+<li>Al termine della procedura di registrazione, all’Utente viene rilasciata una credenziale di accesso personale, sotto forma di password oppure di link identificativo univoco, che consente l’ingresso alla propria area riservata della Piattaforma.</li>
+</ol>
+<h2 id="uso-delle-credenziali-di-accesso-allarea-riservata">Uso delle credenziali di accesso all’area riservata</h2>
+<ol type="1">
+<li><p>L’Utente si impegna a conservare con la massima diligenza le proprie credenziali di accesso fornite al momento della registrazione alla Piattaforma, ovvero a non cederle a terzi a nessun titolo.</p></li>
+<li><p>La Piattaforma, così come i soggetti che ne curano la gestione, non rispondono in alcun modo di eventuali danni, accessi non autorizzati, alterazioni, perdite di dati o altri pregiudizi subiti dall’Utente in caso di cessione, smarrimento o mancata custodia delle proprie credenziali.</p></li>
+<li><p>In caso di utilizzo improprio o non autorizzato delle proprie credenziali, l’Utente è invitato a darne tempestiva comunicazione al team di supporto del progetto, che potrà procedere alla disattivazione del profilo personale e al rilascio di nuove credenziali.</p></li>
+</ol>
+<h2 id="cancellazione-del-profilo-personale">Cancellazione del profilo personale</h2>
+<ol type="1">
+<li><p>L’Utente ha la facoltà di cancellare in qualsiasi momento il proprio profilo personale direttamente dalla Piattaforma tramite l’apposita sezione, o alternativamente inviando una mail (contenente il proprio nome utente e gli altri dati forniti nella registrazione di cui all’art. 5) al seguente indirizzo: <a href="mailto:info@behavix.it">info@behavix.it</a></p></li>
+<li><p>I profili personali, comunque, potranno essere automaticamente cancellati, dal Team di supporto, entro breve tempo dal termine della sperimentazione, senza necessità di ulteriori azioni da parte dell’Utente.</p></li>
+<li><p>La cancellazione del profilo, per le ragioni di cui ai commi precedenti, comporta l’impossibilità di accedere all’area riservata e di utilizzare i servizi della Piattaforma, inclusa la possibilità di visualizzare e consultare i dati di report raccolti durante la sperimentazione.</p></li>
+<li><p>Per quanto riguarda la conservazione dei dati personali, si rinvia all’Informativa sul trattamento dei dati personali (Privacy policy) disponibile nell’apposita sezione al sito <strong><a href="https://www.behavix.it/assets/documents/privacy_policy.html" class="uri">https://www.behavix.it/assets/documents/privacy_policy.html</a></strong> e all’interno della piattaforma.</p></li>
+<li><p>L’Utente potrà comunque, entro quindici giorni dalla conclusione della sperimentazione, richiedere copia dei propri dati di report in formato PDF. I dati di report – ove richiesti tramite mail all’indirizzo <a href="mailto:<a href="mailto:info@behavix.it">info@behavix.it</a>" class="email">info@behavix.it</a> – verranno inviati (alla stessa mail utilizzata per la richiesta) dal Team di sviluppo.</p></li>
+</ol>
+<h2 id="feedback-e-preferenze">Feedback e preferenze</h2>
+<ol type="1">
+<li><p>La Piattaforma consente agli Utenti di esprimere preferenze e fornire feedback in merito ai pasti consumati presso la mensa, attraverso la compilazione di appositi form/questionari.</p></li>
+<li><p>Tali questionari possono essere compilati con cadenza quotidiana, accedendo direttamente alla web-app o tramite la scansione degli appositi QR code esposti nei locali della mensa.</p></li>
+<li><p>I questionari sono strutturati per raccogliere informazioni sul gradimento del pasto, sulle motivazioni di eventuali avanzi o sprechi e contribuiscono alla raccolta di:</p></li>
+</ol>
+<ul>
+<li><p>Dati aggregati, utili alla mensa per monitorare il comportamento generale degli utenti e migliorare l’organizzazione dei pasti, con l’obiettivo di ridurre lo spreco alimentare;</p></li>
+<li><p>Dati personalizzati (o “Dati di report”), che vengono associati al profilo dell’Utente per consentire la generazione di report.</p></li>
+</ul>
+<ol type="1">
+<li><p>La partecipazione alla compilazione dei questionari è facoltativa e volontaria, ma rappresenta una componente centrale dell’esperienza sperimentale proposta dalla Piattaforma.</p></li>
+<li><p>La compilazione dei form da parte degli Utenti che abbiano previamente provveduto alla registrazione di un profilo personale, e che pertanto partecipino in forma identificata e non anonima, attribuirà agli stessi il diritto di prendere parte alle iniziative di gamification e di concorrere all’assegnazione delle premialità, secondo le modalità, i criteri e le condizioni stabilite nel regolamento consultabile a questo link: <u>https://www.behavix.it/assets/documents/terms.html</u></p></li>
+</ol>
+<h2 id="servizio-di-report">Servizio di report</h2>
+<ol type="1">
+<li><p>La Piattaforma - nei limiti di quanto previsto dal Team di Sviluppo - metterà a disposizione dell’Utente un servizio di report, accessibile dalla propria area riservata, che consente di visualizzare i dati di report raccolti nel corso dell’esperienza in mensa.</p></li>
+<li><p>I dati di report sono generati tramite la compilazione volontaria dei form (art. 7) ed il monitoraggio delle quantità di avanzi generati generate da parte dello staff operativo di (Autogrill Italia S.p.A.).</p></li>
+<li><p>Il servizio di report ha esclusivamente finalità informativa e di auto-monitoraggio. Esso, dunque, non ha finalità mediche, nutrizionali o diagnostiche, né può essere utilizzato come base per consigli medici o terapeutici.</p></li>
+<li><p>I dati di report sono visibili unicamente dall’Utente titolare del profilo personale e sono consultabili per tutta la durata della sperimentazione, fino alla cancellazione del profilo personale (che potrà avvenire secondo quanto previsto dall’art. 7).</p></li>
+</ol>
+<h2 id="utilizzo-della-piattaforma">Utilizzo della Piattaforma</h2>
+<ol type="1">
+<li><p>La Piattaforma e i suoi servizi sono forniti “così come sono”. Il Team di sviluppo non garantisce che la Piattaforma sia priva di errori, interruzioni o malfunzionamenti. Nella misura massima consentita dalla legge applicabile, il Team di supporto declina ogni responsabilità per danni diretti, indiretti, incidentali derivanti o in qualsiasi modo correlati all’uso o all’impossibilità di utilizzare la Piattaforma inclusi, a titolo esemplificativo ma non esaustivo, perdita di dati, interruzione del servizio, danni al dispositivo o altre forme di danno.</p></li>
+<li><p>L’Utente, dunque, riconosce e accetta che l’uso della Piattaforma avviene a proprio rischio e sotto la propria esclusiva responsabilità.</p></li>
+</ol>
+<h2 id="limitazione-di-responsabilità-del-team-di-supporto">Limitazione di responsabilità del Team di supporto</h2>
+<ol type="1">
+<li><p>La collaborazione tra Behavix e Autogrill Italia S.p.A.non comporta alcuna ingerenza, da parte del Team di sviluppo, nella gestione operativa della mensa, né nella scelta, preparazione e somministrazione dei pasti, che avviene esclusivamente ad opere e sotto l’esclusiva responsabilità del fornitore del servizio mensa.</p></li>
+<li><p>Pertanto il Team di supporto declina ogni e qualsivoglia responsabilità per eventuali disservizi, danni, disagi o conseguenze pregiudizievoli derivante all’Utente dal consumo dei pasti servizi in mensa. In particolare il Team di sviluppo non è responsabile della qualità, composizione e salubrità dei pasti servizi, né interviene in caso di allergie, intolleranze o problematiche di salute connesse al consumo degli alimenti.</p></li>
+<li><p>Per qualsiasi richiesta, segnalazione o esigenza legata ai pasti o al servizio mensa, l’Utente dovrà rivolgersi direttamente al gestore della mensa.</p></li>
+</ol>
+<h2 id="contatti">Contatti</h2>
+<ol type="1">
+<li><p>Gli Utenti possono contattare il Team di supporto per segnalare eventuali malfunzionamenti della Piattaforma, per richiedere la cancellazione del proprio profilo personali o per qualsiasi altra richiesta di assistenza.</p></li>
+<li><p>I contatti disponibili sono:</p></li>
+</ol>
+<ol type="a">
+<li><p><strong>Email 1:</strong> <a href="mailto:info@behavix.it">info@behavix.it</a> per la richiesta del Report di cui all’art. 7.5</p></li>
+<li><p><strong>Email 2:</strong> <a href="mailto:info@behavix.it">info@behavix.it</a> per la cancellazione del profilo di cui all’art. 7.1</p></li>
+</ol>
+<ol type="1">
+<li>Il Team di supporto si impegna a rispondere alle richieste in tempi ragionevoli e compatibilmente con il volume delle segnalazioni ricevute.</li>
+</ol>
+<h2 id="legge-applicabile">Legge applicabile</h2>
+<ol type="1">
+<li>I presenti Termini e condizioni sono regolati e interpretati in conformità alla Legge italiana.</li>
+</ol>
+
+
+
+    </div>
+  </section>
+
+  <!-- EN -->
+  <section id="lang-en" data-lang="en" hidden>
+    <div class="hero">
+      <span class="eyebrow">Terms &amp; Conditions · Autogrill</span>
+      <h1>Terms and Conditions of Service</h1>
+      <p class="subtitle">Terms governing the use of the Behavix platform for reducing food waste</p>
+      <span class="updated">Last update: 22/07/2026</span>
+    </div>
+    <nav class="toc" id="toc-en" aria-label="Contents"><h2>Contents</h2><ol></ol></nav>
+    <div class="content" id="content-en">
+<h2 id="introduction">Introduction</h2>
+<p>1.1. Behavix provides a digital platform (hereinafter also “Web App” or “Platform”) developed to test digital solutions aimed at reducing food waste in collective catering locations.<br />
+1.2. To achieve this objective, the Platform actively involves individuals (hereinafter also “Users”) who use the Autogrill Italia S.p.A.service at locations managed by the company, through the collection of information, feedback, and monitoring of food waste.<br />
+1.3. User participation in the project is voluntary and can also be anonymous.<br />
+1.4. During the trial period, estimated at 1-12 (renewable) months, the Platform will be used to collect data and monitor Users’ behavior regarding meals in the canteen; at the same time, the Platform provides Users with a “reporting” service, allowing them to monitor food waste trends in the canteen they attend.<br />
+1.5. The Platform is managed by a team led by Behavix S.r.l. Società Benefit and some collaborators, who may be employees of the company or external collaborators (hereinafter also “Development Team”).<br />
+1.6. These Terms and Conditions govern the provision and use of the Platform by Users.</p>
+<h2 id="platform-services">Platform Services</h2>
+<p>2.1. The Platform allows Users to:<br />
+2.1.1. Express preferences and provide feedback on meals consumed: Users may voluntarily complete digital forms on a daily basis, indicating appetite, satisfaction with the meal, and reasons for leftover food (e.g., excessive portions, disliked food categories, etc.).<br />
+2.1.2. View personalized data: By accessing the Platform, Users can view data collected during meals—as determined by the Development Team—and obtain a summary of food consumption according to the parameters of the trial (i.e., Reporting Service).</p>
+<h2 id="nature-of-services">Nature of Services</h2>
+<p>3.1. The Platform and related services are free of charge and are not intended for the promotion or sale of products or services.</p>
+<h2 id="duration-of-service">Duration of Service</h2>
+<p>4.1. The Platform and related services will remain active for the duration of the trial (approximately 1-12 (renewable) months).<br />
+4.2. At the end of the trial, the Platform and services may remain accessible to Users based on agreements between Behavix srl Società Benefit and (Autogrill Italia S.p.A.). The retention of data collected during the trial, including User personal data and report data, is governed by Article 7.5 of these Terms and Conditions.</p>
+<h2 id="personal-profile-and-reserved-area">Personal Profile and Reserved Area</h2>
+<p>5.1. User feedback may be anonymous; however, creating a personal profile is required to access Platform services, including reporting and participation in reward allocation.</p>
+<ul>
+<li>Registration occurs via the Portal, guiding Users through the required information for access to the reserved area.<br />
+5.2. Upon registration, Users receive personal login credentials (password or unique link) granting access to their reserved area.</li>
+</ul>
+<p>5.3. For corporate prizes awarded within the project, the winning User acknowledges that their email address will be communicated to the Innovation and HR office of the host company Autogrill Italia S.p.A.for the sole purpose of managing and delivering the prize, subject to the specific consent given as described in the Privacy Policy.</p>
+<h2 id="use-of-access-credentials">Use of Access Credentials</h2>
+<p>6.1. Users must carefully store their login credentials and not share them with third parties.<br />
+6.2. The Platform and its management are not liable for damages, unauthorized access, data loss, or other harm resulting from improper use or loss of credentials.<br />
+6.3. In case of unauthorized use, Users should promptly contact the support team to deactivate the profile and issue new credentials.</p>
+<h2 id="deletion-of-personal-profile">Deletion of Personal Profile</h2>
+<p>7.1. Users may delete their profile anytime via the Platform or by emailing <a href="mailto:<a href="mailto:info@behavix.it">info@behavix.it</a>" class="email">info@behavix.it</a> with registration details.<br />
+7.2. Profiles may also be automatically deleted by the support team shortly after the trial ends.<br />
+7.3. Profile deletion prevents access to the reserved area and Platform services, including report data.<br />
+7.4. For data retention, see the Privacy Policy available at the following link <a href="https://www.behavix.it/assets/documents/privacy_policy.html" class="uri">https://www.behavix.it/assets/documents/privacy_policy.html</a> or in the Platform.<br />
+7.5. Users may request a PDF copy of report data within fifteen days of trial completion; reports will be sent to the email used for the request.</p>
+<h2 id="feedback-and-preferences">Feedback and Preferences</h2>
+<p>8.1. The Platform allows Users to express their preferences and provide feedback regarding the meals consumed in the canteen by filling out specific forms/questionnaires.<br />
+8.2. These questionnaires can be completed daily, either by accessing the web app directly or by scanning the QR codes displayed in the canteen premises.<br />
+8.3. The questionnaires are designed to collect information on meal satisfaction, the reasons for any leftovers or waste, and contribute to the collection of:<br />
+● <strong>Aggregated data</strong>, useful to the canteen for monitoring general user behavior and improving meal organization, with the goal of reducing food waste;<br />
+● <strong>Personalized data</strong> (or “Report Data”), which are linked to the User’s profile to enable the generation of reports.<br />
+8.4. Participation in completing the questionnaires is optional and voluntary but represents a central component of the experimental experience offered by the Platform.<br />
+8.5. Completing the forms by Users who have previously registered a personal profile — and therefore participate in an identified, non-anonymous form — will entitle them to take part in the gamification initiatives and compete for rewards, in accordance with the procedures, criteria, and conditions set out in the regulation available at the following link: <u>https://www.behavix.it/assets/documents/terms.html</u></p>
+<h2 id="reporting-service">Reporting Service</h2>
+<p>9.1. The Platform provides a report service, accessible in the reserved area, showing collected report data.<br />
+9.2. Report data is generated through voluntary form completion and staff monitoring of leftover quantities.<br />
+9.3. The report service is for information and self-monitoring only, not for medical or nutritional advice.<br />
+9.4. Report data is visible only to the User and accessible until profile deletion.</p>
+<h2 id="platform-use">Platform Use</h2>
+<p>10.1. The Platform is provided “as is.” The Development Team does not guarantee it will be error-free or uninterrupted and is not liable for any direct or indirect damages, including data loss or device harm.<br />
+10.2. Users acknowledge and accept that use of the Platform is at their own risk.</p>
+<h2 id="limitation-of-liability">Limitation of Liability</h2>
+<p>11.1. The collaboration between Behavix and Autogrill Italia S.p.A.does not interfere with canteen operations, meal preparation, or serving, which remain the sole responsibility of the catering provider.<br />
+11.2. The Development Team is not responsible for service disruptions, damages, or consequences from meal consumption, including quality, composition, safety, allergies, or health issues.<br />
+11.3. Users must contact the canteen operator for any meal-related requests or complaints.</p>
+<h2 id="contacts">Contacts</h2>
+<p>12.1. Users can contact the support team for Platform issues, profile deletion, or assistance.<br />
+12.2. Contacts:<br />
+a) <a href="mailto:<a href="mailto:info@behavix.it">info@behavix.it</a>" class="email">info@behavix.it</a> for report requests (Article 7.5)<br />
+b) <a href="mailto:<a href="mailto:info@behavix.it">info@behavix.it</a>" class="email">info@behavix.it</a> for profile deletion (Article 7.1)<br />
+12.3. The support team will respond promptly, subject to request volume.</p>
+<h2 id="governing-law">Governing Law</h2>
+<p>13.1. These Terms and Conditions are governed by and interpreted under <strong>Italian law</strong>.</p>
+
+
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="fi">
+    <div class="company">
+      Behavix srl Societ&agrave; Benefit &middot; P.IVA 02761450226<br>
+      Via Tacchi 1, Rovereto (TN) 38068, Italy<br>
+      <span class="muted">&copy; <span id="yr"></span> Behavix. All Rights Reserved.</span>
+    </div>
+    <div><a href="mailto:info@behavix.it">info@behavix.it</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function slugify(t){return t.toLowerCase().replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-').slice(0,60);}
+  function buildTOC(lang){
+    var content=document.getElementById('content-'+lang);
+    var ol=document.querySelector('#toc-'+lang+' ol');
+    if(!content||!ol||ol.childElementCount)return;
+    var hs=content.querySelectorAll('h2');
+    hs.forEach(function(h,i){
+      if(!h.id) h.id=lang+'-'+(slugify(h.textContent)||('sec'+i));
+      var li=document.createElement('li');
+      var a=document.createElement('a'); a.href='#'+h.id; a.textContent=h.textContent;
+      li.appendChild(a); ol.appendChild(li);
+    });
+  }
+  function setLang(lang){
+    var other = lang==='it'?'en':'it';
+    document.getElementById('lang-'+lang).hidden=false;
+    document.getElementById('lang-'+other).hidden=true;
+    document.getElementById('btn-'+lang).classList.add('active');
+    document.getElementById('btn-'+other).classList.remove('active');
+    document.getElementById('btn-'+lang).setAttribute('aria-pressed','true');
+    document.getElementById('btn-'+other).setAttribute('aria-pressed','false');
+    document.documentElement.lang=lang;
+    buildTOC(lang);
+    try{history.replaceState(null,'', '#'+lang);}catch(e){}
+    window.scrollTo({top:0});
+  }
+  buildTOC('it'); buildTOC('en');
+  if(location.hash==='#en') setLang('en');
+</script>
+</body>
+</html>
